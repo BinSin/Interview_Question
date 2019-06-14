@@ -3,6 +3,9 @@
 - [Library vs Framework](#library-vs-framework)
   - Library
   - Framework
+- [Web Server vs Web Application Server](web-server-vs-web-appliccation-server)
+  - Web Server
+  - Web Application Server(WAS)
 - [Servlet vs JSP](#servlet-vs-jsp)
   - Servlet
   - JSP
@@ -25,15 +28,25 @@
 - 제어의 주체가 **프레임워크**가 되어 프레임워크에서 우리의 코드를 호출한다. (IOC; Inversion of Control)
 - 프레임워크에서 기본적인 뼈대를 잡아놓았기 때문에 우리는 **제어의 흐름에 맞게 코드를 작성**해 주면 프레임워크에서 그것에 맞게 호출한다.
 
+## Web Server vs Web Application Server
+
+### Web Server
+
+
+### Web Application Server
+
+출처 : https://gmlwjd9405.github.io/2018/10/27/webserver-vs-was.html
 ## Servlet vs JSP
 
 ### Servlet
+- Java 언어를 웹어플리케이션 개바하기 쉽게 하기 위해 만든 API이며 이 규약에 맞는 라이브러리나 클래스들을 상속 및 구현하여 만든 클래스들을 Servlet 이라고 한다.
 - **Java 코드** 안에 HTML 코드가 있다.
 - **데이터 처리(Controller)** 에 좋다.
 - 즉, DB와의 통신, Business Logic 호출, 데이터 읽고 확인하는 작업에 유용하다
 - Servlet이 수정되면 Java 코드를 컴파일(.class 파일 생성)한 후 동적인 페이지를 처리하기 때문에 전체 코드를 업데이트하면 다시 컴파일한 후 재배포하는 작업이 필요하다. (**개발 생산성 저하**)
 
 ### JSP
+- HTML 코딩이 어렵고 불편해서 HTML 내부에 **Java 코드를 삽입하는 형식**
 - **HTML 코드** 안에 Java 코드가 있다.
 - **Presentation(View)** 에 좋다.
 - 즉, 요청 결과를 나타내는 HTML을 작성하는데 유용하다.
@@ -44,7 +57,7 @@
 #### JSP만을 이용하는 모델
 - JSP가 사용자의 요청을 받아 Java Bean(DTO, DAO)을 호출하여 적절한 동적 페이지를 생성한다.
 - 장점 : 개발 속도가 빠르고 배우기 쉽다.
-- 단점 : View와 Controller가 혼재하여 코드가 복잡해져 **유지 보수가 어려워**진다.
+- 단점 : View와 Controller가 혼재(디자인과 로직이 섞임)하여 코드가 복잡해져 **유지 보수가 어려워**진다.
 
 #### JSP와 Servlet을 모두 이용하는 모델 (MVC)
 - JSP와 Servlet을 모두 사용하여 View와 Controller를 분리한다.
