@@ -1,12 +1,12 @@
 # Spring Framework
 - [Framework를 사용하는 이유](#framework를-사용하는-이유)
 - [Library vs Framework](#library-vs-framework)
- - Library
- - Framework
+  - Library
+  - Framework
 - [Servlet vs JSP](#servlet-vs-jsp)
- - Servlet
- - JSP
- - Servlet과 JSP의 차이
+  - Servlet
+  - JSP
+  - Servlet과 JSP의 차이
 - [Spring의 장점](#spring의-장점)
 
 ## Framework를 사용하는 이유
