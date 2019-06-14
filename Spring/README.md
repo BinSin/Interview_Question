@@ -29,13 +29,13 @@
 
 ### Servlet
 - **Java 코드** 안에 HTML 코드가 있다.
-- **데이터 처리(Controller)**에 좋다.
+- **데이터 처리(Controller)** 에 좋다.
 - 즉, DB와의 통신, Business Logic 호출, 데이터 읽고 확인하는 작업에 유용하다
 - Servlet이 수정되면 Java 코드를 컴파일(.class 파일 생성)한 후 동적인 페이지를 처리하기 때문에 전체 코드를 업데이트하면 다시 컴파일한 후 재배포하는 작업이 필요하다. (**개발 생산성 저하**)
 
 ### JSP
 - **HTML 코드** 안에 Java 코드가 있다.
-- **Presentation(View)**에 좋다.
+- **Presentation(View)** 에 좋다.
 - 즉, 요청 결과를 나타내는 HTML을 작성하는데 유용하다.
 - JSP가 수정된 경우 재배포할 필요가 없이 WAS가 알아서 처리한다. (배포가 쉽다)
 
