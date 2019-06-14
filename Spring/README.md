@@ -44,13 +44,15 @@
 #### JSP만을 이용하는 모델
 - JSP가 사용자의 요청을 받아 Java Bean(DTO, DAO)을 호출하여 적절한 동적 페이지를 생성한다.
 - 장점 : 개발 속도가 빠르고 배우기 쉽다.
-- 단점 : Viewㅇ와 Controller가 혼재하여 코드가 복잡해져 유지 보수가 어려워진다.
+- 단점 : View와 Controller가 혼재하여 코드가 복잡해져 **유지 보수가 어려워**진다.
 
 #### JSP와 Servlet을 모두 이용하는 모델 (MVC)
 - JSP와 Servlet을 모두 사용하여 View와 Controller를 분리한다.
-- View(보여지는 부분) : HTML이 중심이 되는 JSP를 사용
-- Controller(다른 자바 클래스에 데이터를 넘겨주는 부분) : Java 코드가 중심이 되는 Servlet을 사용
-- Model(Java Beans) : DTO와 DAO를 통해 DB에 접근
+- **View(보여지는 부분)** : HTML이 중심이 되는 JSP를 사용
+- **Controller(다른 자바 클래스에 데이터를 넘겨주는 부분)** : Java 코드가 중심이 되는 Servlet을 사용
+- **Model(Java Beans)** : DTO와 DAO를 통해 DB에 접근
+- 장점 : 기능에 따라 코드가 분리되어 있기 때문에 **유지보수가 용이**하다.
+- 단점 : 구조가 복잡하여 습득이 어렵고 작업량이 많다.
 
 출처 : https://gmlwjd9405.github.io/2018/11/04/servlet-vs-jsp.html
 
