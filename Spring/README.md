@@ -91,17 +91,16 @@
 - 관점지향 프로그래밍(AOP : Aspect Oriented Programming)으로 트랜잭션, 로깅, 보안과 같은 여러 모듈에서 공통적으로 사용하는 기능의 경우 해당 기능을 분리하여 관리한다.
 - POJO(Plain Old Java Object) 방식의 프레임워크로 기존에 존재하는 라이브러리의 지원이 용이하다.
 - 트랜잭션 처리를 위한 일관된 방법을 지원
-- 영속성과 관련된 다양한 서비스를 지원하여 ibatis, hibernate 등과 같은 데이터베이스 처리 라이브러리와 연결할 수 있는 인터페이스를 제공한다.
+- 영속성과 관련된 다양한 서비스를 지원하여 Mybatis, hibernate 등과 같은 데이터베이스 처리 라이브러리와 연결할 수 있는 인터페이스를 제공한다.
 - 높은 확장성을 갖는다.
 
 ### Spring Framework의 기능요소(모듈)
-- Spring Core
-- Spring Context
-- Spring DAO
-- Spring ORM
-- Spring AOP
-- Spring Web
-- Spring WebMVC
-
+- Spring Core : Spring 프레임워크의 기본기능을 제공한다. 이 모듈에 있는 BeanFactory는 Spring의 기본 컨테이너이면서 스프링 DI 기반이다.
+- Spring Context : BeanFactory의 개념을 확장한 것으로 국제화 메시지, 애플리케이션 생명주기 이벤트, 유효성 검증을 지원한다.
+- Spring DAO : JDBC에 대한 추상화 계층으로 JDBC 코딩이나 예외처리 하는 부분을 간편화 시켰으며, AOP 모듈을 이용해 트랜잭션 관리 서비스도 제공한다.
+- Spring ORM : Mybatis, Hibernate, JPA 등 널리 사용되는 ORM 프레임워크와의 연결고리를 제공한다.
+- Spring AOP : AOP 모듈을 통해 관점 지향 프로그래밍을 지원한다.
+- Spring Web : 일반적인 웹 애플리케이션 개발에 필요한 기본기능을 제공하고, Webwork나 Struts와 같은 다른 웹 애플리케이션 프레임워크와의 통합을 지원한다.
+- Spring Web MVC : 사용자 인터페이스가 애플리케이션 로직과 분리되는 웹 애플리케이션을 만드는 경우에 사용되는 일반적인 예시이다.
 
 출처 : https://shlee0882.tistory.com/200
