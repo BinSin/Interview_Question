@@ -12,12 +12,12 @@
   - [JSP](#jsp)
   - [Servlet과 JSP의 관계](#servlet과-jsp의-관계)
     - [JSP만 이용하는 모델](#jsp만-이용하는-모델)
-    - [JSP와 Servlet을 모두 이용하는 모델 (MVC)](#jsp와-servlet을-모두-이용하는-모델 (mvc))
+    - [JSP와 Servlet을 모두 이용하는 모델 (MVC)](#jsp와-servlet을-모두-이용하는-모델-(mvc))
 - [Spring Framework](#spring-framework)
   - [Spring의 정의](#spring의-정의)
   - [Spring의 전략](#spring의-전략)
   - [Spring의 특징](#spring의-특징)
-  - [Spring Framework의 기능요소](#spring-framework의-기능요소)
+  - [Spring Framework의 기능요소 (모듈)](#spring-framework의-기능요소-(모듈))
 
 ## Framework를 사용하는 이유
 소프트웨어의 설계와 구현에 있어서 **전체적인 뼈대와 틀을 제공**함으로써 개발자가 편하게 개발할 수 있게 해준다. 프레임워크의 사용으로 개발자는 비즈니스 로직에 집중함으로써 **생산성이 증가**하고 코드의 재사용성, 유지 보수성 그리고 확장성을 갖게 해줌으로서 **코트의 품질을 높여**준다.
@@ -77,7 +77,7 @@
 
 ### Servlet과 JSP의 관계
 
-#### JSP만을 이용하는 모델
+#### JSP만 이용하는 모델
 - JSP가 사용자의 요청을 받아 Java Bean(DTO, DAO)을 호출하여 적절한 동적 페이지를 생성한다.
 - 장점 : 개발 속도가 빠르고 배우기 쉽다.
 - 단점 : View와 Controller가 혼재(디자인과 로직이 섞임)하여 코드가 복잡해져 **유지 보수가 어려워**진다.
