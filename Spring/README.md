@@ -1,23 +1,23 @@
 # Spring
 - [Framework를 사용하는 이유](#framework를-사용하는-이유)
 - [Library vs Framework](#library-vs-framework)
-  - Library
-  - Framework
-- [Web Server vs Web Application Server](web-server-vs-web-appliccation-server)
-  - Web Server
-  - Web Application Server(WAS)
-  - Web Server와 WAS가 필요한 이유
+  - [Library](#library)
+  - [Framework](#framework)
+- [Web Server vs Web Application Server](#web-server-vs-web-appliccation-server)
+  - [Web Server](#web-server)
+  - [Web Application Server](#web-application-server)
+  - [Web Server와 WAS를 구분하는 이유](#web-server와-was를-구분하는-이유)
 - [Servlet vs JSP](#servlet-vs-jsp)
-  - Servlet
-  - JSP
-  - Servlet과 JSP의 관계
-    - JSP만 이용하는 모델
-    - JSP와 Servlet을 모두 이용하는 모델 (MVC)
+  - [Servlet](#servlet)
+  - [JSP](#jsp)
+  - [Servlet과 JSP의 관계](servlet과-jsp의-관계)
+    - [JSP만 이용하는 모델](#jsp만-이용하는-모델)
+    - [JSP와 Servlet을 모두 이용하는 모델 (MVC)](#jsp와-servlet을-모두-이용하는-모델 (mvc))
 - [Spring Framework](#spring-framework)
-  - Spring의 정의
-  - Spring의 전략
-  - Spring의 특징
-  - Spring Framework의 기능요소
+  - [Spring의 정의](#spring의-정의)
+  - [Spring의 전략](#spring의-전략)
+  - [Spring의 특징](#spring의-특징)
+  - [Spring Framework의 기능요소](#spring-framework의-기능요소)
 
 ## Framework를 사용하는 이유
 소프트웨어의 설계와 구현에 있어서 **전체적인 뼈대와 틀을 제공**함으로써 개발자가 편하게 개발할 수 있게 해준다. 프레임워크의 사용으로 개발자는 비즈니스 로직에 집중함으로써 **생산성이 증가**하고 코드의 재사용성, 유지 보수성 그리고 확장성을 갖게 해줌으로서 **코트의 품질을 높여**준다.
