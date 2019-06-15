@@ -3,7 +3,7 @@
 - [Library vs Framework](#library-vs-framework)
   - [Library](#library)
   - [Framework](#framework)
-- [Web Server vs Web Application Server](#web-server-vs-web-appliccation-server)
+- [Web Server vs Web Application Server](#web-server-vs-web-application-server)
   - [Web Server](#web-server)
   - [Web Application Server](#web-application-server)
   - [Web Server와 WAS를 구분하는 이유](#web-server와-was를-구분하는-이유)
