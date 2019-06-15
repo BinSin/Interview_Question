@@ -12,12 +12,12 @@
   - [JSP](#jsp)
   - [Servlet과 JSP의 관계](#servlet과-jsp의-관계)
     - [JSP만 이용하는 모델](#jsp만-이용하는-모델)
-    - [JSP와 Servlet을 모두 이용하는 모델 (MVC)](#jsp와-servlet을-모두-이용하는-모델-(mvc))
+    - [JSP와 Servlet을 모두 이용하는 모델](#jsp와-servlet을-모두-이용하는-모델)
 - [Spring Framework](#spring-framework)
   - [Spring의 정의](#spring의-정의)
   - [Spring의 전략](#spring의-전략)
   - [Spring의 특징](#spring의-특징)
-  - [Spring Framework의 기능요소 (모듈)](#spring-framework의-기능요소-(모듈))
+  - [Spring Framework의 기능요소](#spring-framework의-기능요소)
 
 ## Framework를 사용하는 이유
 소프트웨어의 설계와 구현에 있어서 **전체적인 뼈대와 틀을 제공**함으로써 개발자가 편하게 개발할 수 있게 해준다. 프레임워크의 사용으로 개발자는 비즈니스 로직에 집중함으로써 **생산성이 증가**하고 코드의 재사용성, 유지 보수성 그리고 확장성을 갖게 해줌으로서 **코트의 품질을 높여**준다.
@@ -82,11 +82,12 @@
 - 장점 : 개발 속도가 빠르고 배우기 쉽다.
 - 단점 : View와 Controller가 혼재(디자인과 로직이 섞임)하여 코드가 복잡해져 **유지 보수가 어려워**진다.
 
-#### JSP와 Servlet을 모두 이용하는 모델 (MVC)
+#### JSP와 Servlet을 모두 이용하는 모델
 - JSP와 Servlet을 모두 사용하여 View와 Controller를 분리한다.
-- **Model(Java Beans)** : 에플리케이션의 상태(데이터)를 나타낸다.
-- **View(JSP)** : 보여지는 부분을 책임진다.
-- **Controller(Servlet)** : Model과 View 사이의 **인터페이스 역할**을 한다.
+- MVC architecture
+  - **Model(Java Beans)** : 에플리케이션의 상태(데이터)를 나타낸다.
+  - **View(JSP)** : 보여지는 부분을 책임진다.
+  - **Controller(Servlet)** : Model과 View 사이의 **인터페이스 역할**을 한다.
 - 장점 : 기능에 따라 코드가 분리되어 있기 때문에 **유지보수가 용이**하다.
 - 단점 : 구조가 복잡하여 습득이 어렵고 작업량이 많다.
 
@@ -113,7 +114,7 @@
 - 영속성과 관련된 다양한 서비스를 지원하여 Mybatis, hibernate 등과 같은 데이터베이스 처리 라이브러리와 연결할 수 있는 인터페이스를 제공한다.
 - 높은 확장성을 갖는다.
 
-### Spring Framework의 기능요소(모듈)
+### Spring Framework의 기능요소
 - Spring Core : Spring 프레임워크의 기본기능을 제공한다. 이 모듈에 있는 BeanFactory는 Spring의 기본 컨테이너이면서 스프링 DI 기반이다.
 - Spring Context : BeanFactory의 개념을 확장한 것으로 국제화 메시지, 애플리케이션 생명주기 이벤트, 유효성 검증을 지원한다.
 - Spring DAO : JDBC에 대한 추상화 계층으로 JDBC 코딩이나 예외처리 하는 부분을 간편화 시켰으며, AOP 모듈을 이용해 트랜잭션 관리 서비스도 제공한다.
