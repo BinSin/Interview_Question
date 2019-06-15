@@ -6,6 +6,7 @@
 - [Web Server vs Web Application Server](web-server-vs-web-appliccation-server)
   - Web Server
   - Web Application Server(WAS)
+  - Web Server와 WAS가 필요한 이유
 - [Servlet vs JSP](#servlet-vs-jsp)
   - Servlet
   - JSP
@@ -35,11 +36,27 @@
 ## Web Server vs Web Application Server
 
 ### Web Server
-
+- 웹 프라우저 클라이언트로부터 HTTP 요청을 받아 정적인 컨텐츠를 제공하는 컴퓨터 프로그램
+- **정적**인 컨텐츠를 제공한다.
+- WAS를 거치지 않고 **바로 자원을 제공**한다.
+- Web Server에서는 정적 컨텐츠만 처리하도록 기능을 분배하여 **서버의 부담을 줄일 수 있다.**
+- Ex) Apache Server, Nginx, IIS 등
 
 ### Web Application Server
+- DB 조회나 다양한 로직 처리를 요구하는 **동적**인 컨텐츠를 제공하기 위해 만들어진 Application Server
+- HTTP를 통해 컴퓨터나 장치에 애플리케이션을 수행해주는 미들웨어이다.
+- WAS를 통해 요청에 맞는 데이터를 DB에서 가져와서 비즈니스 로직에 맞게 결과를 만들어 제공함으로써 **자원을 효율적으로 사용**할 수 있다.
+- Ex) Tomcat, JBoss, Jeus 등
+
+### Web Server와 WAS를 구분하는 이유
+- **서버의 자원을 효율적으로 사용하자** 에서 출발한다.
+- 사용자가 원하는 요청에 대한 결과값을 모두 만들어놓고 서비스하기엔 절대적으로 **자원이 부족**하다.
+- 클라이언트에게 이미지 파일과 같은 정적인 파일들을 보내줄 때, HTML 문서가 보내질 때 함께 가는 것이 아니고 클라이언트가<U> HTML 파일을 먼저 받고 그에 필요한 이미지 파일들을 다시 서버로 요청하면 그때 보내준다.</U>
+- 이 때, 우리의 서버는 데이터베이스를 왔다갔다 하며 로직을 처리하기 바쁜데, 단순한 정적 파일을 브라우저에게 돌려주는 역할을 한다면 굉장히 비효율 적이다.
+- 따라서 이 둘을 나누어 처리하면 더욱 **효율적으로 자원을 활용**할 수 있다.
 
 출처 : https://gmlwjd9405.github.io/2018/10/27/webserver-vs-was.html
+
 ## Servlet vs JSP
 
 ### Servlet
