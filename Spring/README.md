@@ -10,7 +10,7 @@
 - [Servlet vs JSP](#servlet-vs-jsp)
   - [Servlet](#servlet)
   - [JSP](#jsp)
-  - [Servlet과 JSP의 관계](servlet과-jsp의-관계)
+  - [Servlet과 JSP의 관계](#servlet과-jsp의-관계)
     - [JSP만 이용하는 모델](#jsp만-이용하는-모델)
     - [JSP와 Servlet을 모두 이용하는 모델 (MVC)](#jsp와-servlet을-모두-이용하는-모델 (mvc))
 - [Spring Framework](#spring-framework)
