@@ -1,4 +1,4 @@
-# Spring Framework
+# Spring
 - [Framework를 사용하는 이유](#framework를-사용하는-이유)
 - [Library vs Framework](#library-vs-framework)
   - Library
@@ -12,10 +12,14 @@
   - Servlet과 JSP의 관계
     - JSP만 이용하는 모델
     - JSP와 Servlet을 모두 이용하는 모델 (MVC)
-- [Spring의 장점](#spring의-장점)
+- [Spring Framework](#spring-framework)
+  - Spring의 정의
+  - Spring의 전략
+  - Spring의 특징
+  - Spring Framework의 기능요소
 
 ## Framework를 사용하는 이유
-소프트웨어의 설계와 구현에 있어서 **전체적인 뼈대와 틀을 제공**함으로써 개발자가 편하게 개발할 수 있게 해준다. 프레임워크의 사용으로 개발자는 비즈니스 로직에 집중함으로써 **생산성이 증가**하고 코드의 재사성, 유지 보수성 그리고 확장성을 갖게 해줌으로서 **코트의 품질을 높여**준다.
+소프트웨어의 설계와 구현에 있어서 **전체적인 뼈대와 틀을 제공**함으로써 개발자가 편하게 개발할 수 있게 해준다. 프레임워크의 사용으로 개발자는 비즈니스 로직에 집중함으로써 **생산성이 증가**하고 코드의 재사용성, 유지 보수성 그리고 확장성을 갖게 해줌으로서 **코트의 품질을 높여**준다.
 
 ## Library vs Framework
 중요한 차이점은 **제어의 역전**이다.
@@ -61,12 +65,43 @@
 
 #### JSP와 Servlet을 모두 이용하는 모델 (MVC)
 - JSP와 Servlet을 모두 사용하여 View와 Controller를 분리한다.
-- **View(보여지는 부분)** : HTML이 중심이 되는 JSP를 사용
-- **Controller(다른 자바 클래스에 데이터를 넘겨주는 부분)** : Java 코드가 중심이 되는 Servlet을 사용
-- **Model(Java Beans)** : DTO와 DAO를 통해 DB에 접근
+- **Model(Java Beans)** : 에플리케이션의 상태(데이터)를 나타낸다.
+- **View(JSP)** : 보여지는 부분을 책임진다.
+- **Controller(Servlet)** : Model과 View 사이의 **인터페이스 역할**을 한다.
 - 장점 : 기능에 따라 코드가 분리되어 있기 때문에 **유지보수가 용이**하다.
 - 단점 : 구조가 복잡하여 습득이 어렵고 작업량이 많다.
 
 출처 : https://gmlwjd9405.github.io/2018/11/04/servlet-vs-jsp.html
 
-## Spring의 장점
+## Spring Framework
+
+### Spring의 정의
+- IoC와 AOP를 지원하는 경량의 컨테이너 프레임워크
+
+### Spring의 전략
+- Portable Service Abstraction(서비스 추상화) : 기술적인 복잡함은 추상화를 통해 Low Level의 기술구현부분과 기술을 사용하는 **인터페이스로 분리**한다.
+- DI(Dependency Injection) : 유연하게** 확장 가능한 객체**를 만들어 두고 그 관계는 외부에서 동적으로 설정해준다.
+- AOP(Aspect Oriented Programming) : 애플리케이션 로직을 담당하는 코드에 남아있는 기술 관련 코드를 분리해서** 별도의 모듈로 관리**할 수 있게 해준다.
+- POJO(Plain Old Java Object) : **객체지향 원리에 충실**하면서, 특정 환경이나 규약에 종속되지 않고 **필요에 따라 재활용될 수 있는 방식**으로 설계된 객체이다.
+
+### Spring의 특징
+- 경량 컨테이너로 자바 객체를 직접 관리한다.
+- 제어의 역전(IoC : Inversion of Control)을 지원하여 필요에 따라 스프링에서 사용자의 코드를 호출한다.
+- 의존성 주입(DI : Dependency Injection)을 지원하여 각각의 계층이나 서비스들 간에 의존성이 존재할 경우 프레임워크가 서로 연결해준다.
+- 관점지향 프로그래밍(AOP : Aspect Oriented Programming)으로 트랜잭션, 로깅, 보안과 같은 여러 모듈에서 공통적으로 사용하는 기능의 경우 해당 기능을 분리하여 관리한다.
+- POJO(Plain Old Java Object) 방식의 프레임워크로 기존에 존재하는 라이브러리의 지원이 용이하다.
+- 트랜잭션 처리를 위한 일관된 방법을 지원
+- 영속성과 관련된 다양한 서비스를 지원하여 ibatis, hibernate 등과 같은 데이터베이스 처리 라이브러리와 연결할 수 있는 인터페이스를 제공한다.
+- 높은 확장성을 갖는다.
+
+### Spring Framework의 기능요소(모듈)
+- Spring Core
+- Spring Context
+- Spring DAO
+- Spring ORM
+- Spring AOP
+- Spring Web
+- Spring WebMVC
+
+
+출처 : https://shlee0882.tistory.com/200
