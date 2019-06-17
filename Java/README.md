@@ -1,19 +1,29 @@
 # Java
 - [Abstract와 Interface](#abstract와-intercae)
-  - Interface
-  - Abstract
-  - Interface 사용 이유
+  - [Interface](#interface)
+  - [Abstract](#abstract)
+  - [Interface 사용 이유](#interface-사용-이유)
 - [Java8 버전 추가 기능](#java8-버전-추가-기능)
   - [Lambda Function](#lambda-function)
     - [장단점](#장단점)
     - [기본 문법](#기본-문법)
     - [문법 요약](#문법-요약)
   - [Stream](#stream)
-    - [생성하기](#생성하기)
-    - [가공하기](#가공하기)
-    - [결과 만들기](#결과-만들기)
+    - [장점](#장점)
+    - [사용법](#사용법)
+      - [중개 연산](#중개-연산)
+      - [최종 연산](#최종-연산)
+      - [주의점](#주의점)
 
 ## Abstract와 Interface
+
+### Interface
+
+
+### Abstract
+
+
+# Interface 사용 이유
 
 
 
@@ -26,7 +36,7 @@
 - 장점
   1. **코드를 간결**하게 만들 수 있습니다.
   2. 코드가 간결하고 식에 개발자의 의도가 명확히 드러나므로 **가독성이 향상**됩니다.
-  3. 함수를 만드는 과정없이 한번에 처리할 수 있기에 코딩하는 **시간이 줄어**듭니*.
+  3. 함수를 만드는 과정없이 한번에 처리할 수 있기에 코딩하는 **시간이 줄어**듭니다.
   4. **병렬프로그래밍이 용이**합니다.
 
 - 단점
@@ -110,6 +120,102 @@ System.out::println
 전체 -> 맵핑 -> 필터링 1 -> 필터링 2 -> 결과 만들기 -> 결과물
 ```
 
-자세한 내용은 출처를 보자~
-
 출처 : https://futurecreator.github.io/2018/08/26/java-8-streams/
+
+#### 장점
+불필요한 코딩(for, if 문법)을 걷어낼 수 있고 직관적이기 때문에 가독성이 좋아진다.
+
+#### 사용법
+1. 스트림 생성
+2. 중개 연산
+3. 최종 연산
+
+```
+Collections 같은 객체 집합.스트림생성().중개연산().최종연산();
+```
+**.** 으로 연계할 수 있는 방법인 파이프라인
+
+##### 중개 연산
+람다 식으로 처리할 수 있다.
+
+- Filter
+조건에 맞는 것만 거른다.
+
+```Java
+List<String> names = Arrays.asList("jeong", "pro", "jdk", "java");
+Stream<String> a = names.stream().filter(x -> x.contains("o")); // o를 포함한 문자열 반환
+```
+
+- Map
+각 요소를 연산하는데 쓰인다.
+
+```Java
+List<String> names = Arrays.asList("jeong", "pro", "jdk", "java");
+names.parallelStream().map((x) ->{return x.concat("s");}).forEach(x -> System.out.println(x)); // 각 문자열에 뒤에 s 붙인다.
+```
+
+- Sorted
+정렬
+
+- Limit
+개수 제한
+
+```Java
+List<Integer> ages = Arrays.asList(1,2,3,4,5,6,7,8,9);
+ages.stream().filter(x -> x>3)).limit(3); // 스트림의 개수를 3개로 제한
+```
+
+- Distinct
+중복 제거
+
+- Skip
+.skip(3) 이라고 하면 처음 3개의 요소를 제외
+
+- mapToInt, mapToLong, mapToDouble
+해당 타입의 스트림으로 바꿔준다. 예를 들어 "1", "2", "3" 을 mapToInt를 적용하면 1, 2, 3을 가진 스트림으로 변환 해준다.
+
+
+##### 최종 연산
+- count(), min(), max(), sum(), average()
+갯수, 최소값, 최대값, 합계, 평균을 얻을 수 있는 함수
+
+- reduce
+누적된 값을 계산하는 함수.
+
+```Java
+List<Integer> ages = new ArrayList<Integer>();
+ages.add(1);ages.add(2);ages.add(3);//1,2,3
+System.out.println(ages.stream().reduce((b,c) -> b+c).get()); // 1+2+3=6 이 출력된다.
+```
+
+- forEach
+각 요소를 돌면서 처리
+
+```Java
+List<Integer> ages = new ArrayList<Integer>();
+ages.add(1);ages.add(2);ages.add(3);//1,2,3
+Set<Integer> set = ages.stream().collect(Collectors.toSet());
+set.forEach(x-> System.out.println(x));//1,2,3
+```
+
+- collect
+스트림의 값들을 모아준다.
+
+- iterator
+Iterator<T>를 반환한다.
+
+- noneMatch, anyMatch, allMatch
+조건을 **모든 요소들이 만족하는지 않는지**, ** 하나라도 조건을 만족**하는지, **모든 요소들이 만족**하는지 판단해서 boolean 값을 리턴한다.
+
+```Java
+List<Integer> ages = new ArrayList<Integer>();
+ages.add(1);ages.add(2);ages.add(3);//1,2,3
+System.out.println(ages.stream().filter(x -> x>1).noneMatch(x->x>2));//false
+```
+
+##### 주의점
+- Stream은 **재사용이 불가능**한다.
+- 병렬 스트림은 여러 쓰레드가 작업한다. -> paralleStream()
+- 중개 연산은 **미리하지 않고 최종 연산이 적용될 때 중개 연산도 실행**된다.
+
+출처: https://jeong-pro.tistory.com/165
