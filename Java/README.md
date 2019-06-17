@@ -138,54 +138,45 @@ Collections 같은 객체 집합.스트림생성().중개연산().최종연산()
 ##### 중개 연산
 람다 식으로 처리할 수 있다.
 
-- Filter
-
+###### Filter
 조건에 맞는 것만 거른다.
 ```Java
 List<String> names = Arrays.asList("jeong", "pro", "jdk", "java");
 Stream<String> a = names.stream().filter(x -> x.contains("o")); // o를 포함한 문자열 반환
 ```
 
-- Map
-
+###### Map
 각 요소를 연산하는데 쓰인다.
 ```Java
 List<String> names = Arrays.asList("jeong", "pro", "jdk", "java");
 names.parallelStream().map((x) ->{return x.concat("s");}).forEach(x -> System.out.println(x)); // 각 문자열에 뒤에 s 붙인다.
 ```
 
-- Sorted
-
+###### Sorted
 정렬
 
-- Limit
-
+###### Limit
 개수 제한
 ```Java
 List<Integer> ages = Arrays.asList(1,2,3,4,5,6,7,8,9);
 ages.stream().filter(x -> x>3)).limit(3); // 스트림의 개수를 3개로 제한
 ```
 
-- Distinct
-
+###### Distinct
 중복 제거
 
-- Skip
-
+###### Skip
 .skip(3) 이라고 하면 처음 3개의 요소를 제외
 
-- mapToInt, mapToLong, mapToDouble
-
+###### mapToInt, mapToLong, mapToDouble
 해당 타입의 스트림으로 바꿔준다. 예를 들어 "1", "2", "3" 을 mapToInt를 적용하면 1, 2, 3을 가진 스트림으로 변환 해준다.
 
 
 ##### 최종 연산
-- count(), min(), max(), sum(), average()
-
+###### count(), min(), max(), sum(), average()
 갯수, 최소값, 최대값, 합계, 평균을 얻을 수 있는 함수
 
-- reduce
-
+###### reduce
 누적된 값을 계산하는 함수.
 ```Java
 List<Integer> ages = new ArrayList<Integer>();
@@ -193,8 +184,7 @@ ages.add(1);ages.add(2);ages.add(3);//1,2,3
 System.out.println(ages.stream().reduce((b,c) -> b+c).get()); // 1+2+3=6 이 출력된다.
 ```
 
-- forEach
-
+###### forEach
 각 요소를 돌면서 처리
 ```Java
 List<Integer> ages = new ArrayList<Integer>();
@@ -203,16 +193,13 @@ Set<Integer> set = ages.stream().collect(Collectors.toSet());
 set.forEach(x-> System.out.println(x));//1,2,3
 ```
 
-- collect
-
+###### collect
 스트림의 값들을 모아준다.
 
-- iterator
-
+###### iterator
 Iterator<T>를 반환한다.
 
-- noneMatch, anyMatch, allMatch
-
+###### noneMatch, anyMatch, allMatch
 조건을 **모든 요소들이 만족하는지 않는지**, ** 하나라도 조건을 만족**하는지, **모든 요소들이 만족**하는지 판단해서 boolean 값을 리턴한다.
 ```Java
 List<Integer> ages = new ArrayList<Integer>();
