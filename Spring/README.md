@@ -15,6 +15,7 @@
     - [JSP와 Servlet을 모두 이용하는 모델](#jsp와-servlet을-모두-이용하는-모델)
 - [Get vs Post](#get-vs-post)
 - [Cookie vs Session](#client-vs-session)
+- [JDBC](#jdbc)
 - [Spring Framework](#spring-framework)
   - [Spring의 정의](#spring의-정의)
   - [Spring의 전략](#spring의-전략)
@@ -94,6 +95,15 @@
 - 단점 : 구조가 복잡하여 습득이 어렵고 작업량이 많다.
 
 출처 : https://gmlwjd9405.github.io/2018/11/04/servlet-vs-jsp.html
+
+## Get vs Post
+
+
+##Cookie vs Session
+
+
+##JDBC
+
 
 ## Spring Framework
 
