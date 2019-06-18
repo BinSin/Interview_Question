@@ -8,6 +8,13 @@
   - [Interface](#interface)
   - [Abstract](#abstract)
   - [Interface 사용 이유](#interface-사용-이유)
+- [JDBC](#jdbc)
+- [Thread vs Process](#thread-vs-process)
+
+- [Call by Reference vs Call by Value](#call-by-reference-vs-all-by-value)
+- [Primitive type vs Reference type](#primitive-type-vs-reference-type)
+- [Wrapper Class](#wrapper-class)
+  - [Boxing vs Unboxing](#boxing-vs-unboxing)
 - [Java8 버전 추가 기능](#java8-버전-추가-기능)
   - [Lambda Function](#lambda-function)
     - [장단점](#장단점)
@@ -55,8 +62,31 @@
 ### Abstract
 
 
-# Interface 사용 이유
+### Interface 사용 이유
 
+
+## JDBC
+
+
+## Thread vs Process
+
+
+## Get vs Post
+
+
+## Cookie vs Session
+
+
+## Call by Reference vs Call by Value
+
+
+## Primitive type vs Reference type
+
+
+## Wrapper Class
+
+
+### Boxing vs Unboxing
 
 
 ## Java8 버전 추가 기능
