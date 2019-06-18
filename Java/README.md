@@ -1,9 +1,11 @@
 # Java
 - [Java의 특징](#java의-특징)
+- [Java EE vs Jave SE](#java-ee-vs-java-se)
 - [객체 지향 프로그래밍](#객체-지향-프로그래밍)
   - [OOP의 특징](#oop의-특징)
   - [Object](#object)
   - [Overloading vs Overriding](#overloading-vs-overriding)
+- [Collection](#collection)
 - [Java의 메모리 영역](#java의-메모리-영역)
 - [접근 제어자](#접근-제어자)
 - [Abstract와 Interface](#abstract와-interface)
@@ -16,6 +18,7 @@
 - [Static](#static)
 - [Call by Reference vs Call by Value](#call-by-reference-vs-call-by-value)
 - [Primitive type vs Reference type](#primitive-type-vs-reference-type)
+- [Generic](#generic)
 - [Wrapper Class](#wrapper-class)
   - [사용 이유](#사용-이유)
   - [Boxing vs Unboxing](#boxing-vs-unboxing)
@@ -39,6 +42,10 @@
 5. **Garbage Collector를 통한 자동적인 메모리 관리**가 가능하다.
 6. **멀티쓰레드**를 지원한다.
 
+## Java EE vs Jave SE
+- Java EE : Java Platform EnterPrise Edition의 약자로 자바를 이용한 서버측 개발을 위한 플랫폼
+- Java SE : Java Platform Standard Edition의 약자로 데스크톱, 서버, 임베디드를 위한 표준 자바 플랫폼, 주로 안드로이드 개발시에 사용한다.
+
 ## 객체 지향 프로그래밍
 - 실제 세계의 데이터를 객체로 취급하여 그 객체와의 상호작용을 통해 프로그램이 동작하는 것을 말한다.
 
@@ -57,6 +64,9 @@
 
 - Overriding
   - **부모 클래스의 메소드를 하위 클래스에서 상속받아 재정의하는 것**이다.
+
+## Collection
+
 
 ## Java의 메모리 영역
 1. 메소드 영역 : Byte 코드, 전역 변수, Static 변수
@@ -114,6 +124,9 @@
 ## Primitive type vs Reference type
 - Primitive type : 변수에 **값 자체를 저장**하는 것
 - Reference type : 메모리 상에 **객체가 있는 위치를 저장**하는 것
+
+## Generic
+
 
 ## Wrapper Class
 - 기본 자료형(Primitive type)의 데이터를 객체로 만들기 위해 포장하는 클래스이다.
