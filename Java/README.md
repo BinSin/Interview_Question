@@ -63,16 +63,7 @@
 ### Interface 사용 이유
 
 
-## JDBC
-
-
 ## Thread vs Process
-
-
-## Get vs Post
-
-
-## Cookie vs Session
 
 
 ## Call by Reference vs Call by Value
