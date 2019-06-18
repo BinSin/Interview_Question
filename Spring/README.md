@@ -14,7 +14,7 @@
     - [JSP만 이용하는 모델](#jsp만-이용하는-모델)
     - [JSP와 Servlet을 모두 이용하는 모델](#jsp와-servlet을-모두-이용하는-모델)
 - [Get vs Post](#get-vs-post)
-- [Cookie vs Session](#client-vs-session)
+- [Cookie vs Session](#cookie-vs-session)
   - [Cookie와 Session을 사용하는 이유](#cookie와-session을-사용하는-이유)
 - [JDBC](#jdbc)
   - [Java에서 DB를 연결하는 방법](#java에서-db를-연결하는-방법)
