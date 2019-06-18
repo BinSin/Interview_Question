@@ -113,7 +113,7 @@
   - Get 방식보다 **전송 속도가 느리다**.
   - 주로 웹 브라우저가 웹 서버에 **데이터를 전달**할 때 사용한다.
 
-##Cookie vs Session
+## Cookie vs Session
 - Cookie
   - 쿠키에 관련된 데이터는 **사용자의 PC에 저장**되기 때문에 다른 사용자에 의해 임의로 변경이 가능하여 보안성이 낮다.
 
@@ -125,7 +125,7 @@
 
 출처 : https://animal-park.tistory.com/8
 
-##JDBC
+## JDBC
 - Java DataBase Connection의 약자로, Java 언어를 통해 데이터 베이스에 접근할 수 있는 프로그래밍이다.
 
 ### Java에서 DB를 연결하는 방법
