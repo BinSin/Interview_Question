@@ -12,6 +12,7 @@
   - [Interface 사용 이유](#interface-사용-이유)
 - [Serialization](#serialization)
 - [Thread vs Process](#thread-vs-process)
+  - [Thread를 구현하는 방법](#thread를-구현하는-방법)
 - [Call by Reference vs Call by Value](#call-by-reference-vs-all-by-value)
 - [Primitive type vs Reference type](#primitive-type-vs-reference-type)
 - [Wrapper Class](#wrapper-class)
@@ -70,12 +71,16 @@
 
 ### Abstract
 - 추상메소드를 하나 이상 가진 클래스
+- 자신의 생성자로 객체 생성이 불가능하다.
+- 일반 메소드를 사용할 수 있다.
 
 ### Interface
-
+- 추상 메소드와 상수만으로 이루어진 추상 클래스
+- 다중 상속이 가능하다.
+- 메소드의 선언만 가능하다.
 
 ### Interface 사용 이유
-
+**팀 작업에서 공동 작업 시 충동을 방지하기 위해서**이다. A는 클래스를 개발하고, B는 그 클래스를 이용하여 코드를 개발해야 할 때, 인터페이스가 구현되어 있다면 B는 그 결과값을 알기 대문에 A가 클래스를 개발할때까지 기다릴 필요가 없이 작업을 시작할 수 있다.
 
 ## Serialization
 - JVM 힙 영역에 존재하는 객체를 한 줄로 늘어선 바이트의 형태로 만드는 것을 직렬화라고 한다.
@@ -91,7 +96,17 @@
 2. Runnable 인터페이스를 implements하여 구현한다.
 
 ## Call by Reference vs Call by Value
+- Call by Reference : 매개 변수의 원래 **주소에 값을 저장**하는 방식
+- Call by Value : 주어진 **값을 복사하여 처리**하는 방식, 메소드 내의 처리 결과는 메소드 밖의 변수에 영향을 미치지 않는다.
 
+## Static
+- 인스턴스를 생성하면, 각 인스턴스들은 서로 독립적이기 대문에 서로 다른 값을 유지하는데, static을 사용하면 각 인스턴스들이 공통적으로 값이 유지된다.
+- static이 붙은 멤버변수는 클래스가 메모리에 올라갈때 자동적으로 생성되기 때문에 인스턴스를 생성하지 않아도 된다.
+- 덕분에 메서드의 호출시간이 짧아지기 때문에 효율이 높아진다.
+- 따라서 클래스의 멤버변수 중 모든 인스턴스에 공통된 값을 유지해야 하는 경우, 작성한 메서드 중에서 인스턴스 변수를 사용하지 않는 메서드에 static을 붙여준다.
+- [단점](https://unabated.tistory.com/entry/%EC%99%9C-%EC%9E%90%EB%B0%94%EC%97%90%EC%84%9C-static%EC%9D%98-%EC%82%AC%EC%9A%A9%EC%9D%84-%EC%A7%80%EC%96%91%ED%95%B4%EC%95%BC-%ED%95%98%EB%8A%94%EA%B0%80)
+
+출처 : https://vaert.tistory.com/101
 
 ## Primitive type vs Reference type
 
