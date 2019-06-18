@@ -11,11 +11,13 @@
   - [Abstract](#abstract)
   - [Interface 사용 이유](#interface-사용-이유)
 - [Serialization](#serialization)
-- [Thread vs Process](#thread-vs-process)
+- [Process vs Thread](#process-vs-thread)
   - [Thread를 구현하는 방법](#thread를-구현하는-방법)
+- [Static](#static)
 - [Call by Reference vs Call by Value](#call-by-reference-vs-all-by-value)
 - [Primitive type vs Reference type](#primitive-type-vs-reference-type)
 - [Wrapper Class](#wrapper-class)
+  - [사용 이유](#사용-이유)
   - [Boxing vs Unboxing](#boxing-vs-unboxing)
 - [Java8 버전 추가 기능](#java8-버전-추가-기능)
   - [Lambda Function](#lambda-function)
@@ -86,18 +88,15 @@
 - JVM 힙 영역에 존재하는 객체를 한 줄로 늘어선 바이트의 형태로 만드는 것을 직렬화라고 한다.
 - 직렬화한 것을 객체의 형태로 복원하는 작업을 역직렬화라고 한다.
 
-## Thread vs Process
-- Thread
-
+## Process vs Thread
 - Process
+  - **실행 중인 프로그램**이다. 프로그램을 실행하면 OS로부터 실행에 필요한 자원을 할당받아 프로세스가 된다.
+- Thread
+  - **프로세스의 자원을 이용하여 실제로 작업을 수행하는 것**이다.
 
 ### Thread를 구현하는 방법
 1. Thread Class를 상속받는다.
 2. Runnable 인터페이스를 implements하여 구현한다.
-
-## Call by Reference vs Call by Value
-- Call by Reference : 매개 변수의 원래 **주소에 값을 저장**하는 방식
-- Call by Value : 주어진 **값을 복사하여 처리**하는 방식, 메소드 내의 처리 결과는 메소드 밖의 변수에 영향을 미치지 않는다.
 
 ## Static
 - 인스턴스를 생성하면, 각 인스턴스들은 서로 독립적이기 대문에 서로 다른 값을 유지하는데, static을 사용하면 각 인스턴스들이 공통적으로 값이 유지된다.
@@ -108,14 +107,26 @@
 
 출처 : https://vaert.tistory.com/101
 
-## Primitive type vs Reference type
+## Call by Reference vs Call by Value
+- Call by Reference : 매개 변수의 원래 **주소에 값을 저장**하는 방식
+- Call by Value : 주어진 **값을 복사하여 처리**하는 방식, 메소드 내의 처리 결과는 메소드 밖의 변수에 영향을 미치지 않는다.
 
+## Primitive type vs Reference type
+- Primitive type : 변수에 **값 자체를 저장**하는 것
+- Reference type : 메모리 상에 **객체가 있는 위치를 저장**하는 것
 
 ## Wrapper Class
+- 기본 자료형(Primitive type)의 데이터를 객체로 만들기 위해 포장하는 클래스이다.
 
+### 사용 이유
+- 제네릭, 자료구조, 매개변수 등 **기본 자료형이 아닌 래퍼런스 타입을 필요로 하는 경우**가 많고 **메서드를 갖고 있어 다양하게 활용이 가능**하기 때문이다.
 
 ### Boxing vs Unboxing
+- Boxing :  박싱(boxing)은 기본 자료형의 데이터를 래퍼(wrapper) 클래스의 객체로 만드는 과정
+- Un-Boxing : 래퍼(wrapper) 클래스의 데이터를 기본 자료형으로 얻어내는 과정
+- new 연산자 또는 valueOf() 메소드를 이용할 수 있다.
 
+출처 : http://blog.naver.com/PostView.nhn?blogId=heartflow89&logNo=220975218499&redirect=Dlog&widgetTypeCall=true
 
 ## Java8 버전 추가 기능
 
