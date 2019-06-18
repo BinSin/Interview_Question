@@ -1,6 +1,6 @@
 # Java
 - [Java의 특징](#java의-특징)
-- [Java EE vs Jave SE](#java-ee-vs-java-se)
+- [Java EE vs Java SE](#java-ee-vs-java-se)
 - [객체 지향 프로그래밍](#객체-지향-프로그래밍)
   - [OOP의 특징](#oop의-특징)
   - [Object](#object)
@@ -42,7 +42,7 @@
 5. **Garbage Collector를 통한 자동적인 메모리 관리**가 가능하다.
 6. **멀티쓰레드**를 지원한다.
 
-## Java EE vs Jave SE
+## Java EE vs Java SE
 - Java EE : Java Platform EnterPrise Edition의 약자로 자바를 이용한 서버측 개발을 위한 플랫폼
 - Java SE : Java Platform Standard Edition의 약자로 데스크톱, 서버, 임베디드를 위한 표준 자바 플랫폼, 주로 안드로이드 개발시에 사용한다.
 
