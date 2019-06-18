@@ -13,6 +13,8 @@
   - [Servlet과 JSP의 관계](#servlet과-jsp의-관계)
     - [JSP만 이용하는 모델](#jsp만-이용하는-모델)
     - [JSP와 Servlet을 모두 이용하는 모델](#jsp와-servlet을-모두-이용하는-모델)
+- [Get vs Post](#get-vs-post)
+- [Cookie vs Session](#client-vs-session)
 - [Spring Framework](#spring-framework)
   - [Spring의 정의](#spring의-정의)
   - [Spring의 전략](#spring의-전략)
