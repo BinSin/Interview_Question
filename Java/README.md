@@ -4,10 +4,13 @@
   - [OOP의 특징](#oop의-특징)
   - [Object](#object)
   - [Overloading vs Overriding](#overloading-vs-overriding)
+- [Java의 메모리 영역](#java의-메모리-영역)
+- [접근 제어자](#접근-제어자)
 - [Abstract와 Interface](#abstract와-intercae)
   - [Interface](#interface)
   - [Abstract](#abstract)
   - [Interface 사용 이유](#interface-사용-이유)
+- [Serialization](#serialization)
 - [Thread vs Process](#thread-vs-process)
 - [Call by Reference vs Call by Value](#call-by-reference-vs-all-by-value)
 - [Primitive type vs Reference type](#primitive-type-vs-reference-type)
@@ -52,19 +55,40 @@
 - Overriding
   - **부모 클래스의 메소드를 하위 클래스에서 상속받아 재정의하는 것**이다.
 
+## Java의 메모리 영역
+1. 메소드 영역 : Byte 코드, 전역 변수, Static 변수
+2. 스택 영역 : 매개 변수, 지역 변수 -> 컴파일 시 메모리에 할당되며 사용이 끝나면 바로 소멸한다.
+3. 힙 영역 : new 로 생성된 객체 -> 호출이 끝나도 사라지지 않으며 프로그램 실행 시 동적으로 할당된다.
+
+## 접근 제어자
+1. public : 접근 제한이 없다.
+2. protected : 같은 패키지 내, 다른 패키지의 자손 클래스에서 접근이 가능하다.
+3. default : 같은 패키지 내에서만 접근이 가능하다.
+4. private : 같은 클래스 내에서만 접근이 가능하다.
+
 ## Abstract와 Interface
 
-### Interface
-
-
 ### Abstract
+- 추상메소드를 하나 이상 가진 클래스
+
+### Interface
 
 
 ### Interface 사용 이유
 
 
-## Thread vs Process
+## Serialization
+- JVM 힙 영역에 존재하는 객체를 한 줄로 늘어선 바이트의 형태로 만드는 것을 직렬화라고 한다.
+- 직렬화한 것을 객체의 형태로 복원하는 작업을 역직렬화라고 한다.
 
+## Thread vs Process
+- Thread
+
+- Process
+
+### Thread를 구현하는 방법
+1. Thread Class를 상속받는다.
+2. Runnable 인터페이스를 implements하여 구현한다.
 
 ## Call by Reference vs Call by Value
 
