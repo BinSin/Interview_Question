@@ -8,9 +8,7 @@
   - [Interface](#interface)
   - [Abstract](#abstract)
   - [Interface 사용 이유](#interface-사용-이유)
-- [JDBC](#jdbc)
 - [Thread vs Process](#thread-vs-process)
-
 - [Call by Reference vs Call by Value](#call-by-reference-vs-all-by-value)
 - [Primitive type vs Reference type](#primitive-type-vs-reference-type)
 - [Wrapper Class](#wrapper-class)
