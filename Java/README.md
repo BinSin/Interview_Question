@@ -4,16 +4,20 @@
   - [OOP의 특징](#oop의-특징)
   - [Object](#object)
   - [Overloading vs Overriding](#overloading-vs-overriding)
+- [Java의 메모리 영역](#java의-메모리-영역)
+- [접근 제어자](#접근-제어자)
 - [Abstract와 Interface](#abstract와-intercae)
   - [Interface](#interface)
   - [Abstract](#abstract)
   - [Interface 사용 이유](#interface-사용-이유)
-- [JDBC](#jdbc)
-- [Thread vs Process](#thread-vs-process)
-
+- [Serialization](#serialization)
+- [Process vs Thread](#process-vs-thread)
+  - [Thread를 구현하는 방법](#thread를-구현하는-방법)
+- [Static](#static)
 - [Call by Reference vs Call by Value](#call-by-reference-vs-all-by-value)
 - [Primitive type vs Reference type](#primitive-type-vs-reference-type)
 - [Wrapper Class](#wrapper-class)
+  - [사용 이유](#사용-이유)
   - [Boxing vs Unboxing](#boxing-vs-unboxing)
 - [Java8 버전 추가 기능](#java8-버전-추가-기능)
   - [Lambda Function](#lambda-function)
@@ -54,40 +58,75 @@
 - Overriding
   - **부모 클래스의 메소드를 하위 클래스에서 상속받아 재정의하는 것**이다.
 
+## Java의 메모리 영역
+1. 메소드 영역 : Byte 코드, 전역 변수, Static 변수
+2. 스택 영역 : 매개 변수, 지역 변수 -> 컴파일 시 메모리에 할당되며 사용이 끝나면 바로 소멸한다.
+3. 힙 영역 : new 로 생성된 객체 -> 호출이 끝나도 사라지지 않으며 프로그램 실행 시 동적으로 할당된다.
+
+## 접근 제어자
+1. public : 접근 제한이 없다.
+2. protected : 같은 패키지 내, 다른 패키지의 자손 클래스에서 접근이 가능하다.
+3. default : 같은 패키지 내에서만 접근이 가능하다.
+4. private : 같은 클래스 내에서만 접근이 가능하다.
+
 ## Abstract와 Interface
 
-### Interface
-
-
 ### Abstract
+- 추상메소드를 하나 이상 가진 클래스
+- 자신의 생성자로 객체 생성이 불가능하다.
+- 일반 메소드를 사용할 수 있다.
 
+### Interface
+- 추상 메소드와 상수만으로 이루어진 추상 클래스
+- 다중 상속이 가능하다.
+- 메소드의 선언만 가능하다.
 
 ### Interface 사용 이유
+**팀 작업에서 공동 작업 시 충동을 방지하기 위해서**이다. A는 클래스를 개발하고, B는 그 클래스를 이용하여 코드를 개발해야 할 때, 인터페이스가 구현되어 있다면 B는 그 결과값을 알기 대문에 A가 클래스를 개발할때까지 기다릴 필요가 없이 작업을 시작할 수 있다.
 
+## Serialization
+- JVM 힙 영역에 존재하는 객체를 한 줄로 늘어선 바이트의 형태로 만드는 것을 직렬화라고 한다.
+- 직렬화한 것을 객체의 형태로 복원하는 작업을 역직렬화라고 한다.
 
-## JDBC
+## Process vs Thread
+- Process
+  - **실행 중인 프로그램**이다. 프로그램을 실행하면 OS로부터 실행에 필요한 자원을 할당받아 프로세스가 된다.
+- Thread
+  - **프로세스의 자원을 이용하여 실제로 작업을 수행하는 것**이다.
 
+### Thread를 구현하는 방법
+1. Thread Class를 상속받는다.
+2. Runnable 인터페이스를 implements하여 구현한다.
 
-## Thread vs Process
+## Static
+- 인스턴스를 생성하면, 각 인스턴스들은 서로 독립적이기 대문에 서로 다른 값을 유지하는데, static을 사용하면 각 인스턴스들이 공통적으로 값이 유지된다.
+- static이 붙은 멤버변수는 클래스가 메모리에 올라갈때 자동적으로 생성되기 때문에 인스턴스를 생성하지 않아도 된다.
+- 덕분에 메서드의 호출시간이 짧아지기 때문에 효율이 높아진다.
+- 따라서 클래스의 멤버변수 중 모든 인스턴스에 공통된 값을 유지해야 하는 경우, 작성한 메서드 중에서 인스턴스 변수를 사용하지 않는 메서드에 static을 붙여준다.
+- [단점](https://unabated.tistory.com/entry/%EC%99%9C-%EC%9E%90%EB%B0%94%EC%97%90%EC%84%9C-static%EC%9D%98-%EC%82%AC%EC%9A%A9%EC%9D%84-%EC%A7%80%EC%96%91%ED%95%B4%EC%95%BC-%ED%95%98%EB%8A%94%EA%B0%80)
 
-
-## Get vs Post
-
-
-## Cookie vs Session
-
+출처 : https://vaert.tistory.com/101
 
 ## Call by Reference vs Call by Value
-
+- Call by Reference : 매개 변수의 원래 **주소에 값을 저장**하는 방식
+- Call by Value : 주어진 **값을 복사하여 처리**하는 방식, 메소드 내의 처리 결과는 메소드 밖의 변수에 영향을 미치지 않는다.
 
 ## Primitive type vs Reference type
-
+- Primitive type : 변수에 **값 자체를 저장**하는 것
+- Reference type : 메모리 상에 **객체가 있는 위치를 저장**하는 것
 
 ## Wrapper Class
+- 기본 자료형(Primitive type)의 데이터를 객체로 만들기 위해 포장하는 클래스이다.
 
+### 사용 이유
+- 제네릭, 자료구조, 매개변수 등 **기본 자료형이 아닌 래퍼런스 타입을 필요로 하는 경우**가 많고 **메서드를 갖고 있어 다양하게 활용이 가능**하기 때문이다.
 
 ### Boxing vs Unboxing
+- Boxing :  박싱(boxing)은 기본 자료형의 데이터를 래퍼(wrapper) 클래스의 객체로 만드는 과정
+- Un-Boxing : 래퍼(wrapper) 클래스의 데이터를 기본 자료형으로 얻어내는 과정
+- new 연산자 또는 valueOf() 메소드를 이용할 수 있다.
 
+출처 : http://blog.naver.com/PostView.nhn?blogId=heartflow89&logNo=220975218499&redirect=Dlog&widgetTypeCall=true
 
 ## Java8 버전 추가 기능
 
