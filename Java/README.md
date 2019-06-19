@@ -178,7 +178,71 @@
 - Reference type : 메모리 상에 **객체가 있는 위치를 저장**하는 것
 
 ## Generic
+제네릭은 **코드 블럭 내부에서 쓸 자료형을 외부에서 지정하는 기법**을 뜻한다. 여러가지 자료형을 허용하고 싶을 때 Object로 선언해버리면 깔끔하지만, 그렇게하면 **원하지 않는 자료형이 입력되었을 때의 오류를 컴파일 시점에 잡아낼 수 없다.**
 
+### Generic Class
+클래스 내부에서 사용될 자료형을 지정할 수 있다.
+```Java
+class Foo<T> {
+    private T t;
+
+    public void set(T t) {
+        this.t = t;
+    }
+
+    public T get() {
+        return t;
+    }
+}
+```
+
+### Generic Method
+메소드에만 제네릭을 선언할 수 있다. 이 때 파라미터 타입 또는 리턴 타입에 제네릭을 선언했으면 **메소드의 리터나입 앞에도 똑같이 선언**해 주어야 한다.
+```Java
+class Koo {
+    // 두개 이상의 파라미터에도 각각 제네릭을 설정할 수 있다.
+    public <N1, N2> Integer exampleOne(N1 t, N2 e) {
+        return (Integer)t + (Integer)e;
+    }
+
+    // 먼저 나왔던 Foo 클래스를 리턴타입으로 정의한 메소드
+    public <String> Foo<String> exampleTwo() {
+        return new Foo<>();
+    }
+}
+```
+
+## Generic Interface
+제네릭을 선언하여 클래스들이 인터페이스 구현을 유연하게 할 수 있다.
+```Java
+interface Roo <T1, T2, T3> {
+    T1 implementThis(T1 t1);
+    T2 implementThis();
+    T3 maintainGeneric(T3 t3);
+}
+
+// 제네릭에 어떤 자료형의 정의하느냐에 따라 유연하게 구현 가능.
+class roo <String, Integer, T3> implements Roo<String,Integer,T3> {
+
+    @Override
+    public String implementThis(String s) {
+        return s;
+    }
+
+    @Override
+    public Integer implementThis() {
+        return null;
+    }
+
+    // 이렇게 제네릭을 유지하는 방법도 있음.
+    @Override
+    public T3 maintainGeneric(T3 t3) {
+        return null;
+    }
+}
+```
+
+출처: https://preamtree.tistory.com/138
 
 ## Wrapper Class
 - 기본 자료형(Primitive type)의 데이터를 객체로 만들기 위해 포장하는 클래스이다.
