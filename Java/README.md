@@ -33,6 +33,7 @@
 - [Wrapper Class](#wrapper-class)
   - [사용 이유](#사용-이유)
   - [Boxing vs Unboxing](#boxing-vs-unboxing)
+- [String vs StringBuffer vs StringBuilder](#string-vs-stringbuffer-vs-stringbuilder)
 - [Java8 버전 추가 기능](#java8-버전-추가-기능)
   - [Lambda Function](#lambda-function)
     - [장단점](#장단점)
@@ -147,7 +148,9 @@
 **팀 작업에서 공동 작업 시 충동을 방지하기 위해서**이다. A는 클래스를 개발하고, B는 그 클래스를 이용하여 코드를 개발해야 할 때, 인터페이스가 구현되어 있다면 B는 그 결과값을 알기 대문에 A가 클래스를 개발할때까지 기다릴 필요가 없이 작업을 시작할 수 있다.
 
 ## Serialization
-- JVM 힙 영역에 존재하는 객체를 한 줄로 늘어선 바이트의 형태로 만드는 것을 직렬화라고 한다.
+- JVM 힙 영역에 존재하는 객체를 한 줄로 늘어선 바이트의 형태(Stream)로 만드는 것을 직렬화라고 한다.
+  - 자바에서는 파일이나 콘솔의 입출력을 직접 다루지 않고, 스트림이라는 흐름을 통해 다룬다.
+  - ex) 프로그램 <-> 스트림 <-> 키보드, 모니터, 파일, 네트워크, ...
 - 직렬화한 것을 객체의 형태로 복원하는 작업을 역직렬화라고 한다.
 
 ## Process vs Thread
@@ -256,6 +259,21 @@ class roo <String, Integer, T3> implements Roo<String,Integer,T3> {
 - new 연산자 또는 valueOf() 메소드를 이용할 수 있다.
 
 출처 : http://blog.naver.com/PostView.nhn?blogId=heartflow89&logNo=220975218499&redirect=Dlog&widgetTypeCall=true
+
+## String vs StringBuffer vs StringBuilder
+- String
+  - 한번 생성되면 변경이 불가능하다. (immutable)
+  - 만약 문자열에 변화를 주면 메모리 공간이 변하는 것이 아니라 **새로운 String 객체**를 만들어서 새로운 메모리 공간을 만든다.
+  - 기존의 문자열은 Garbage Collector에 의해 제거되기 때문에 **문자열 연산이 많아지게 되면 오버헤드가 발생**하여 성능이 떨어진다.
+  - 따라서 **문자열 연산이 적고 조회가 많을 때 사용**하는 것이 좋다.
+- StringBuffer
+  - 변경이 가능하다. (mutable)
+  - 멀티 쓰레드 환경에서 synchronized 키워드가 가능하므로 동기화가 가능하다. (Thread-Safe)
+  - 따라서 **문자열 연산이 많은 멀티 쓰레드 환경에 적절**하다.
+- StringBuilder
+  - 변경이 가능하다. (mutable)
+  - 동기화를 지원하지 않기 때문에 멀티 쓰레드 환경에 적절하지 않다.
+  - 따라서 **싱글쓰레드 또는 쓰레드를 사용하지 않아도 되는 환경에 적절**하다.
 
 ## Java8 버전 추가 기능
 
