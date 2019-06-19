@@ -33,6 +33,7 @@
 - [Wrapper Class](#wrapper-class)
   - [사용 이유](#사용-이유)
   - [Boxing vs Unboxing](#boxing-vs-unboxing)
+- [String vs StringBuffer vs StringBuilder](#string-vs-stringbuffer-vs-stringbuilder)
 - [Java8 버전 추가 기능](#java8-버전-추가-기능)
   - [Lambda Function](#lambda-function)
     - [장단점](#장단점)
@@ -258,6 +259,21 @@ class roo <String, Integer, T3> implements Roo<String,Integer,T3> {
 - new 연산자 또는 valueOf() 메소드를 이용할 수 있다.
 
 출처 : http://blog.naver.com/PostView.nhn?blogId=heartflow89&logNo=220975218499&redirect=Dlog&widgetTypeCall=true
+
+## String vs StringBuffer vs StringBuilder
+- String
+  - 한번 생성되면 변경이 불가능하다. (immutable)
+  - 만약 문자열에 변화를 주면 메모리 공간이 변하는 것이 아니라 **새로운 String 객체**를 만들어서 새로운 메모리 공간을 만든다.
+  - 기존의 문자열은 Garbage Collector에 의해 제거되기 때문에 **문자열 연산이 많아지게 되면 오버헤드가 발생**하여 성능이 떨어진다.
+  - 따라서 **문자열 연산이 적고 조회가 많을 때 사용**하는 것이 좋다.
+- StringBuffer
+  - 변경이 가능하다. (mutable)
+  - 멀티 쓰레드 환경에서 synchronized 키워드가 가능하므로 동기화가 가능하다. (Thread-Safe)
+  - 따라서 **문자열 연산이 많은 멀티 쓰레드 환경에 적절**하다.
+- StringBuilder
+  - 변경이 가능하다. (mutable)
+  - 동기화를 지원하지 않기 때문에 멀티 쓰레드 환경에 적절하지 않다.
+  - 따라서 **싱글쓰레드 또는 쓰레드를 사용하지 않아도 되는 환경에 적절**하다.
 
 ## Java8 버전 추가 기능
 
