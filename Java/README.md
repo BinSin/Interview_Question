@@ -6,6 +6,17 @@
   - [Object](#object)
   - [Overloading vs Overriding](#overloading-vs-overriding)
 - [Collection](#collection)
+  - [Set](#set)
+    - [HashSet](#hashset)
+    - [TreeSet](#treeset)
+  - [List](#list)
+    - [Vector](#vector)
+    - [ArrayList](#arraylist)
+    - [LinkedList](#linkedlist)
+- [Map](#map)
+  - [Hashtable](#hashtable)
+  - [HashMap](#hashmap)
+  - [TreeMap](#treemap)
 - [Java의 메모리 영역](#java의-메모리-영역)
 - [접근 제어자](#접근-제어자)
 - [Abstract와 Interface](#abstract와-interface)
@@ -66,7 +77,48 @@
   - **부모 클래스의 메소드를 하위 클래스에서 상속받아 재정의하는 것**이다.
 
 ## Collection
+순서나 집합적인 저장공간
 
+### Set
+순서를 유지하지 않는 데이터의 집합으로 데이터의 중복을 허용하지 않는다.
+
+#### HashSet
+- **가장 빠른 임의 접근 속도**
+- 순서를 예측할 수 없다.
+
+#### TreeSet
+- **정렬 방법을 지정**할 수 있다.
+
+### List
+순서가 있는 데이터의 집합으로 데이터의 중복을 허용한다.
+
+#### Vector
+- 과거에 대용량 처리를 위해 사용했다.
+- 내부에서 자동으로 **동기화 처리**가 일어난다.
+- 비교적 **성능이 좋지 않고 무거워** 잘 쓰이지 않는다.
+
+#### ArrayList
+- 단방향 포인터 구조로 각 데이터에 대한 인덱스를 가지고 있어** 조회 기능**에 성능이 뛰어나다.
+
+#### LinkedList
+- 양방향 포인터 구조로 데이터의 **삽입, 삭제**가 빈번할 경우 데이터의 위치 정보만 수정하면 되기에 유용하다.
+- 스택, 큐, 양방향 큐 등을 만드는 용도로 쓰인다.
+
+## Map
+키와 값으로 이루어진 데이터의 집합으로 순서는 유지되지 않으며 키의 중복을 허용하지 않으니 값의 중복은 허용한다.
+
+### Hashtable
+- HashMap 보다는 느리지만 **동기화를 지원**한다.
+- null 값이 올 수 없다.
+
+### HashMap
+- 중복과 순서가 허용되지 않는다.
+- null 값이 올 수 있다.
+
+### TreeMap
+- **정렬된 순서대로 키와 값을 저장**하여 검색이 빠르다.
+
+출처 : https://gangnam-americano.tistory.com/41
 
 ## Java의 메모리 영역
 1. 메소드 영역 : Byte 코드, 전역 변수, Static 변수
