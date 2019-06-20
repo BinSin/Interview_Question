@@ -31,13 +31,14 @@
 
 
 ### Stack
-
+- LIFO(Last In First Out), 나중에 들어간 원소가 먼저 나온다.
 
 ###  Queue
-
+- FIFO(First In First Out), 먼저 들어간 원소가 먼저 나온다.
 
 #### Check Point
-
+- Stack 두 개로 Queue 구현하기
+- Stack 으로 괄호 유효성 체크하기
 
 ## Non Linear
 하나의 자료 뒤에 여러개의 자료가 존재할 수 있는 형태
