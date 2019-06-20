@@ -30,8 +30,8 @@
 -  데이터의 삽입/삭제 시 O(1)의 시간복잡도를 따르게 되므로 **삽입/삭제 등의 연산이 빈번할 경우 연결리스트를 사용하는 것이 효율적**이다.
 
 #### Check Point
-1.[Array를 기반으로한 LinkedList](https://github.com/BinSin/Interview_Question/tree/master/ImportantCoding/Interview/src/DataStructure/ArrayBasedOnlinkedlist)
-2. [ArrayList를 기반으로 한 LinkedList](https://github.com/BinSin/Interview_Question/tree/master/ImportantCoding/Interview/src/DataStructure/LinkedlistBasedOnArray)
+1. [Array를 기반으로한 LinkedList](https://github.com/BinSin/Interview_Question/tree/master/ImportantCoding/Interview/src/DataStructure/ArrayBasedOnlinkedlist)
+
 ### Stack
 
 
