@@ -9,6 +9,7 @@
     - [Binary Tree](#binary-tree)
     - [Binary Search Tree](#binary-search-tree)
     - [Binary Heap](#binary-heap)
+    - [Red Black Tree](#red-black-tree)
   - [Graph](#graph)
     - [Minimum Spanning Tree](#minimum-spanning-tree)
     - [Kruskal Algorithm](#kruskal-algorithm)
@@ -73,6 +74,10 @@
 - 종류
   1. Max Heap : 부모 노드의 값이 최대값이 되는 BST
   2. Min Heap : 부모 노드의 값이 최소값이 되는 BST
+
+#### Red Black Tree
+- BST를 기반으로 하는 트리 형식으로 편향 트리가 되는 것을 방지하기 위해 노드에 색깔을 주어 편향을 막은 트리
+- Depth가 최소가 되도록 해주기 때문에 탐색, 삽입, 삭제 시 O(log n)의 시간 복잡도를 갖게 된다.
 
 ### Graph
 
