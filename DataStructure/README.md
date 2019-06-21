@@ -10,11 +10,15 @@
     - [Binary Search Tree](#binary-search-tree)
     - [Binary Heap](#binary-heap)
     - [Red Black Tree](#red-black-tree)
+    - [Index Tree](#index-tree)
   - [Graph](#graph)
     - [Minimum Spanning Tree](#minimum-spanning-tree)
     - [Kruskal Algorithm](#kruskal-algorithm)
     - [Prim Algorithm](#prim-algorithm)
     - [Floyd Warshall Algorithm](#floyd-warshall-algorithm)
+- [Hash](#hash)
+- [Set](#set)
+- [Map](#map)
 
 ## Linear
 자료를 구성하는 데이터를 순차적으로 나열시킨 형태
@@ -85,6 +89,10 @@
   4. red 노드의 자식들의 색깔은 모두 black 이다.
   5. 루트 노드에서 임의의 리프 노드에 이르는 경로에서 만나는 블랙 노드의 수는 모두 같다.
 
+#### Index Tree
+- 이진 트리의 한 종류로서 **구간 합**을 구하는데 쓰인다.
+- 구간 합을 구할 때 O(long n)의 시간 복잡도를 갖는다.
+
 ### Graph
 
 
@@ -98,3 +106,12 @@
 
 
 #### Floyd Warshall Algorithm
+
+
+## Hash
+
+
+## Set
+
+
+## Map
