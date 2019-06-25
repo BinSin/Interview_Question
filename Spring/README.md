@@ -171,6 +171,50 @@
 
 ### Filter vs Interceptor vs AOP
 ![spring1](../img/spring1.png)
+
 요청이 들어오면 Filter -> Interceptor -> AOP -> interceptor -> Filter 순으로 거치게 된다.
+
+1. 서버를 실행시켜 서블릿이 올라오는 동안에 init이 실행되고, 그 후 doFilter가 실행된다.
+2. 컨트롤러에 들어가기 전 preHandler가 실행된다.
+3. 컨트롤러에서 나와 postHandler, after Completion, doFilter 순으로 진행이 된다.
+4. 서블릿 종료 시 destroy가 실행된다.
+
+#### Filter
+- 요청과 응답을 거른 뒤 정제하는 역할
+- Spring Context 외부에 존재하여 스프링과 무관한 자원에 대해 동작한다.
+- DispatcherServlet 이전에 실행이 되는데 필터가 동작하도록 지정된 자원의 앞단에서 요청내용을 변경하거나, 여러가지 체크를 수행한다.
+- 또한 자원의 처리가 끝난 후 응답내용에 대해서도 처리를 할 수 있다.
+- 보통 web.xml에 등록하고, 일반적으로 인코딩 변환 처리, XSS방어 등의 요청에 대한 처리로 사용된다.
+-  URL-PATTERN을 /* 로 정의하여 servlet, jsp 뿐만 아니라 이미지와 같은 모든 자원의 요청에도 호출된다.
+- 실행 메서드
+  - init() : 필터 인스턴스 초기화
+  - doFilter() : 전/후 처리
+  - destory() : 필터 인스턴스 종료
+
+#### Interceptor
+- 요청에 대한 작업을 전/후로 가로챈다.
+- DispatcherServlet이 컨트롤러를 호출하기 전/후로 끼어들어 Spring Context 내부에서 Controller에 관한 요청과 응답에 대해 처리한다.
+- 스프링의 모든 bean 객체에 접근할 수 있다.
+- 인터셉터를 여러 개 사용할 수 있다.
+- 로그인 체크, 권한 체크, 프로그램 실행시간 계산 작업, 로그 확인 등의 업무처리에 사용한다.
+- 실행 메서드
+  - preHandler() : 컨트롤러 메서드가 실행되기 전
+  - postHandler() : 컨트롤러 메서드 실행 직후 view 페이지 렌더링이 되기 전
+  - afterCompletion() : view 페이지가 렌더링 되고 난 후
+
+#### AOP
+- OOP를 보완하기 위해 나온 개념
+- 객체 지향 프로그래맹을 했을 때도 줄일 수 없던 중복된 부분을 줄이기 위해 관점에서 바라보고 처리한다.
+- 로깅, 트랜잭션, 에러 처리 등 비즈니스 단의 메서드에서 사용한다.
+- Advice vs HandlerInterceptor
+- 파라미터의 차이
+  - Advice : JoinPoint나 ProceedingJoinPoint 등을 활용하여 호출
+  - HandlerInterceptor : Filter와 유사하게 HttpServletRequest, HttpServletResponse를 피라미터로 사용
+- Point Cut
+  - @Before : 대상 메서드의 수행 전
+  - @After : 대상 메서드의 수행 후
+  - @After-returning : 대상 메서드의 정상적인 수행 후
+  - @After-throwing : 예외 발생 후
+  - @Around : 대상 메서드의 수행 전/후
 
 출처 : https://goddaehee.tistory.com/154
