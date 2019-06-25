@@ -203,6 +203,18 @@
   - afterCompletion() : view 페이지가 렌더링 되고 난 후
 
 #### AOP
-
+- OOP를 보완하기 위해 나온 개념
+- 객체 지향 프로그래맹을 했을 때도 줄일 수 없던 중복된 부분을 줄이기 위해 관점에서 바라보고 처리한다.
+- 로깅, 트랜잭션, 에러 처리 등 비즈니스 단의 메서드에서 사용한다.
+- Advice vs HandlerInterceptor
+- 파라미터의 차이
+  - Advice : JoinPoint나 ProceedingJoinPoint 등을 활용하여 호출
+  - HandlerInterceptor : Filter와 유사하게 HttpServletRequest, HttpServletResponse를 피라미터로 사용
+- Point Cut
+  - @Before : 대상 메서드의 수행 전
+  - @After : 대상 메서드의 수행 후
+  - @After-returning : 대상 메서드의 정상적인 수행 후
+  - @After-throwing : 예외 발생 후
+  - @Around : 대상 메서드의 수행 전/후
 
 출처 : https://goddaehee.tistory.com/154
