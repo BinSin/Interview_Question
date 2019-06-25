@@ -23,7 +23,7 @@
   - [Spring의 전략](#spring의-전략)
   - [Spring의 특징](#spring의-특징)
   - [Spring Framework의 기능요소](#spring-framework의-기능요소)
-  - [Filter vs Interceptor vs AOP](filter-vs-interceptor-vs-aop)
+  - [Filter vs Interceptor vs AOP](#filter-vs-interceptor-vs-aop)
 
 ## Framework를 사용하는 이유
 소프트웨어의 설계와 구현에 있어서 **전체적인 뼈대와 틀을 제공**함으로써 개발자가 편하게 개발할 수 있게 해준다. 프레임워크의 사용으로 개발자는 비즈니스 로직에 집중함으로써 **생산성이 증가**하고 코드의 재사용성, 유지 보수성 그리고 확장성을 갖게 해줌으로서 **코트의 품질을 높여**준다.
