@@ -480,24 +480,31 @@ System.out.println(ages.stream().filter(x -> x>1).noneMatch(x->x>2));//false
 객체 참조가 없는 상태, 즉 null 값을 갖는 참조 변수로 객체 접근 연산자인 도트(.)를 사용했을 때 발생한다.
 
 - ArrayIndexOutOfBoundsException
+
 배열에서 인덱스 범위를 초과하여 사용할 경우인 에러이다.
 
 - NumberFormatExcpeion
+
 문자열로 되어 있는 데이터를 숫자로 변경하는 경우가 자주 발생한다.
 
 - ArithmeticException
+
 산술연산 에러이고  0으로 나눌 때 에러가 발생한다.
 
 - ClassCastException
+
 적절치 못하게 클래스를 형변환하는 경우 에러가 발생한다.
 
 - OutOfMemoryException
+
 사용 가능한 메모리가 없는 경우에 발생한다.
 
 - NoClassDefFoundException
+
 원하는 클래스를 찾지 못한 경우에 발생한다.
 
 - NegativeArraySizeException
+
 배열의 크기가 음수값인 경우 발생한다.
 
 출처 : https://deftkang.tistory.com/44
