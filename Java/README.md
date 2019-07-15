@@ -476,35 +476,13 @@ System.out.println(ages.stream().filter(x -> x>1).noneMatch(x->x>2));//false
 예외가 발생되면 프로그램은 곧바로 종료된다는 점에서는 에러와 동일하다. 그러나 예외는 예외처리를 통해 프로그램을 종료하지 않고 정상 실행 상태가 유지되도록 할 수 있다.
 
 ### Runtime Exception
-- NullPointerException
-객체 참조가 없는 상태, 즉 null 값을 갖는 참조 변수로 객체 접근 연산자인 도트(.)를 사용했을 때 발생한다.
-
-- ArrayIndexOutOfBoundsException
-
-배열에서 인덱스 범위를 초과하여 사용할 경우인 에러이다.
-
-- NumberFormatExcpeion
-
-문자열로 되어 있는 데이터를 숫자로 변경하는 경우가 자주 발생한다.
-
-- ArithmeticException
-
-산술연산 에러이고  0으로 나눌 때 에러가 발생한다.
-
-- ClassCastException
-
-적절치 못하게 클래스를 형변환하는 경우 에러가 발생한다.
-
-- OutOfMemoryException
-
-사용 가능한 메모리가 없는 경우에 발생한다.
-
-- NoClassDefFoundException
-
-원하는 클래스를 찾지 못한 경우에 발생한다.
-
-- NegativeArraySizeException
-
-배열의 크기가 음수값인 경우 발생한다.
+- NullPointerException : 객체 참조가 없는 상태일 경우 발생한다.
+- ArrayIndexOutOfBoundsException : 배열에서 인덱스 범위를 초과하여 사용할 경우인 에러이다.
+- NumberFormatExcpeion : 문자열로 되어 있는 데이터를 숫자로 변경하는 경우 발생한다.
+- ArithmeticException : 어떤 수를 0으로 나눌 때 발생한다.
+- ClassCastException : 적절치 못하게 클래스를 형변환하는 경우 에러가 발생한다.
+- OutOfMemoryException : 사용 가능한 메모리가 없는 경우에 발생한다.
+- NoClassDefFoundException : 원하는 클래스를 찾지 못한 경우에 발생한다.
+- NegativeArraySizeException : 배열의 크기가 음수값인 경우 발생한다.
 
 출처 : https://deftkang.tistory.com/44
