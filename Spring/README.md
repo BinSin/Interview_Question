@@ -24,6 +24,12 @@
   - [Spring의 특징](#spring의-특징)
   - [Spring Framework의 기능요소](#spring-framework의-기능요소)
   - [Filter vs Interceptor vs AOP](#filter-vs-interceptor-vs-aop)
+- [REST](#rest)
+  - [RESTful](#restful)
+  - [REST의 특징](#rest의-특징)
+  - [REST의 구성](#rest의-구성)
+  - [REST API 디자인 가이드](#rest-api-디자인-가이드)
+  - [HTTP 응답 코드](#http-응답-코드)
 
 ## Framework를 사용하는 이유
 소프트웨어의 설계와 구현에 있어서 **전체적인 뼈대와 틀을 제공**함으로써 개발자가 편하게 개발할 수 있게 해준다. 프레임워크의 사용으로 개발자는 비즈니스 로직에 집중함으로써 **생산성이 증가**하고 코드의 재사용성, 유지 보수성 그리고 확장성을 갖게 해줌으로서 **코트의 품질을 높여**준다.
@@ -219,3 +225,12 @@
   - @Around : 대상 메서드의 수행 전/후
 
 출처 : https://goddaehee.tistory.com/154
+
+## REST
+### RESTful
+### REST의 특징
+### REST의 구성
+### REST API 디자인 가이드
+### HTTP 응답 코드
+
+출처 : https://nesoy.github.io/articles/2017-02/REST
