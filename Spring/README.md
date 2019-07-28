@@ -30,6 +30,9 @@
   - [REST의 구성](#rest의-구성)
   - [REST API 디자인 가이드](#rest-api-디자인-가이드)
   - [HTTP 응답 코드](#http-응답-코드)
+- [JPA](#jpa)
+  - [Hibernate](#hibernate)
+  - [Spring Data JPA](#spring-data-jpa)
 - [Spring Boot](#spring-boot)
   - [Spring Boot 장점](#spring-boot-장점)
   - [Spring Boot 단점](#spring-boot-단점)
@@ -284,6 +287,22 @@ Representational State Transfer
   - 500 : 서버에 뭔가 문제가 있을때 사용하는 응답 코드
 
 출처 : https://nesoy.github.io/articles/2017-02/REST
+
+## JPA
+- Java Persistence API의 약자
+- 자바 어플리케이션에서 관계형 데이터베이스를 사용하는 방식을 정의한 인터페이스이다.
+
+### Hibernate
+- JPA라는 명세의 구현체이다. (interface와 해당 interface를 구현한 class 와 같은 관계)
+- JPA의 핵심인 EntityManagerFactory, EntityManager, EntityTransaction을 Hibernate에서는 각각 SessionFactory, Session, Transaction으로 상속받고 각각 Impl로 구현한다.
+- JPA를 사용하기 위해서 반드시 Hibernate를 사용할 필요는 없다
+
+### Spring Data JPA
+- JPA를 쓰기 편하게 만들어 놓은 모듈이다.
+-  JPA를 한 단계 추상화시킨 Repository라는 인터페이스를 제공함으로써 이루어진다.
+- 사용자가 Repository 인터페이스를 정해진 규칙대로 매소드를 입력하면 Spring이 알아서 해당 메소드 이름에 적합한 쿼리를 날리는 구현체를 만들어 Bean으로 등록한다.
+
+출처 : https://suhwan.dev/2019/02/24/jpa-vs-hibernate-vs-spring-data-jpa/
 
 ## Spring Boot
 - 애플리케이션을 신속하게 설정하고 스프링 구동 애플리케이션을 빌드하기 위한 기본 구성을 제공하는 유틸리티
