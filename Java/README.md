@@ -156,6 +156,8 @@
   - ex) 프로그램 <-> 스트림 <-> 키보드, 모니터, 파일, 네트워크, ...
 - 직렬화한 것을 객체의 형태로 복원하는 작업을 역직렬화라고 한다.
 
+예시 : https://github.com/BinSin/BinSinMall/blob/master/binsinHibernateStore/src/main/java/com/binsin/store/model/Cart.java
+
 ## Process vs Thread
 - Process
   - **실행 중인 프로그램**이다. 프로그램을 실행하면 OS로부터 실행에 필요한 자원을 할당받아 프로세스가 된다.
