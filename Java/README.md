@@ -481,20 +481,20 @@ System.out.println(ages.stream().filter(x -> x>1).noneMatch(x->x>2));//false
 예외는 try/catch 로 사전에 예방할 수 있다.
 
 ### Error vs Exception
-컴퓨터 하드웨어의 오작동 또는 고장으로 인해 응용프로그램 실행 오류가 발생하는 것을 자바에서는 에러(Error)라고 하고, 에러는 메모리 부족이나 스택오버플로우와 같이 일단 발생하면 복구할 수 없는 심각한 오류이고, 예는 발생하더라도 수습될 수 있는 비교적 덜 심각한 것이다.
+컴퓨터 하드웨어의 오작동 또는 고장으로 인해 응용프로그램 실행 오류가 발생하는 것을 자바에서는 에러(Error)라고 하고, 에러는 메모리 부족이나 스택오버플로우와 같이 일단 발생하면 **복구할 수 없는 심각한 오류**이고, 예외는 발생하더라도 **수습될 수 있는 비교적 덜 심각한 것**이다.
 
-에러는 JVM 실행에 문제가 생긴 것이므로 개발자가 대처할 방법이 없다. 하지만 예외(Exception)는 사용자의 잘못된 조작 또는 개발자의 잘못된 코딩으로 인해 발생하는 프로그램 오류를 말한다.
+에러는 JVM 실행에 문제가 생긴 것이므로 개발자가 대처할 방법이 없다. 하지만 **예외(Exception)는 사용자의 잘못된 조작 또는 개발자의 잘못된 코딩으로 인해 발생하는 프로그램 오류**를 말한다.
 
 예외가 발생되면 프로그램은 곧바로 종료된다는 점에서는 에러와 동일하다. 그러나 예외는 예외처리를 통해 프로그램을 종료하지 않고 정상 실행 상태가 유지되도록 할 수 있다.
 
 ### Runtime Exception
-- NullPointerException : 객체 참조가 없는 상태일 경우 발생한다.
-- ArrayIndexOutOfBoundsException : 배열에서 인덱스 범위를 초과하여 사용할 경우인 에러이다.
-- NumberFormatExcpeion : 문자열로 되어 있는 데이터를 숫자로 변경하는 경우 발생한다.
-- ArithmeticException : 어떤 수를 0으로 나눌 때 발생한다.
-- ClassCastException : 적절치 못하게 클래스를 형변환하는 경우 에러가 발생한다.
-- OutOfMemoryException : 사용 가능한 메모리가 없는 경우에 발생한다.
-- NoClassDefFoundException : 원하는 클래스를 찾지 못한 경우에 발생한다.
-- NegativeArraySizeException : 배열의 크기가 음수값인 경우 발생한다.
+- NullPointerException : **객체 참조가 없는 상태**일 경우 발생한다.
+- ArrayIndexOutOfBoundsException : **배열에서 인덱스 범위를 초과**하여 사용할 경우인 에러이다.
+- NumberFormatExcpeion : **문자열로 되어 있는 데이터를 숫자로 변경**하는 경우 발생한다.
+- ArithmeticException : 어떤 수를 **0으로 나눌 때 발생**한다.
+- ClassCastException : **적절치 못하게 클래스를 형변환하는 경우** 에러가 발생한다.
+- OutOfMemoryException : **사용 가능한 메모리가 없는 경우**에 발생한다.
+- NoClassDefFoundException : **원하는 클래스를 찾지 못한 경우**에 발생한다.
+- NegativeArraySizeException : **배열의 크기가 음수값인 경우** 발생한다.
 
 출처 : https://deftkang.tistory.com/44
