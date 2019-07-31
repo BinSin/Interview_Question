@@ -27,6 +27,7 @@
 - [Process vs Thread](#process-vs-thread)
   - [Thread를 구현하는 방법](#thread를-구현하는-방법)
 - [Static](#static)
+  - [Static 단점](#static-단점)
 - [Call by Reference vs Call by Value](#call-by-reference-vs-call-by-value)
 - [Primitive type vs Reference type](#primitive-type-vs-reference-type)
 - [Generic](#generic)
@@ -169,13 +170,22 @@
 2. Runnable 인터페이스를 implements하여 구현한다.
 
 ## Static
-- 인스턴스를 생성하면, 각 인스턴스들은 서로 독립적이기 대문에 서로 다른 값을 유지하는데, static을 사용하면 각 인스턴스들이 공통적으로 값이 유지된다.
-- static이 붙은 멤버변수는 클래스가 메모리에 올라갈때 자동적으로 생성되기 때문에 인스턴스를 생성하지 않아도 된다.
-- 덕분에 메서드의 호출시간이 짧아지기 때문에 효율이 높아진다.
-- 따라서 클래스의 멤버변수 중 모든 인스턴스에 공통된 값을 유지해야 하는 경우, 작성한 메서드 중에서 인스턴스 변수를 사용하지 않는 메서드에 static을 붙여준다.
-- [단점](https://unabated.tistory.com/entry/%EC%99%9C-%EC%9E%90%EB%B0%94%EC%97%90%EC%84%9C-static%EC%9D%98-%EC%82%AC%EC%9A%A9%EC%9D%84-%EC%A7%80%EC%96%91%ED%95%B4%EC%95%BC-%ED%95%98%EB%8A%94%EA%B0%80)
+- 인스턴스를 생성하면, 각 인스턴스들은 서로 독립적이기 때문에 서로 다른 값을 유지하는데, static을 사용하면 **각 인스턴스들이 공통적으로 값이 유지**된다.
+- static이 붙은 멤버변수는 **클래스가 메모리에 올라갈때 자동적으로 생성**되기 때문에 인스턴스를 생성하지 않아도 된다.
+- 덕분에 **메서드의 호출시간이 짧아지기 때문에 효율이 높아진다.**
+- 따라서 클래스의 멤버변수 중 **모든 인스턴스에 공통된 값을 유지해야 하는 경우**, 작성한 메서드 중에서 **인스턴스 변수를 사용하지 않는 메서드**에 static을 붙여준다.
 
 출처 : https://vaert.tistory.com/101
+
+### Static 단점
+
+- 객체 지향적이지 않다. 객체의 데이터를 **캡슐화해야 하는데 static을 사용하면 이 법칙에 위배**된다.
+- 지나치게 많은 static 변수를 사용하게 되면 이들로부터 **프로그램이 종료할 때까지 메모리를 회수할 수 없기 때문에 가상머신이 메모리 부족**을 겪게 된다.
+- interface를 구현할 때 static 메서드를 사용할 수 없다. 이렇게** 재사용성을 높여주는 자바의 유용한 객체지향적 기능들을 사용하는 것을 방해**한다.
+
+출처 : https://unabated.tistory.com/entry/%EC%99%9C-%EC%9E%90%EB%B0%94%EC%97%90%EC%84%9C-static%EC%9D%98-%EC%82%AC%EC%9A%A9%EC%9D%84-%EC%A7%80%EC%96%91%ED%95%B4%EC%95%BC-%ED%95%98%EB%8A%94%EA%B0%80
+
+
 
 ## Call by Reference vs Call by Value
 - Call by Reference : 매개 변수의 원래 **주소에 값을 저장**하는 방식
