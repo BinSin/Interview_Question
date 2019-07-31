@@ -152,9 +152,11 @@
 **팀 작업에서 공동 작업 시 충동을 방지하기 위해서**이다. A는 클래스를 개발하고, B는 그 클래스를 이용하여 코드를 개발해야 할 때, 인터페이스가 구현되어 있다면 B는 그 결과값을 알기 대문에 A가 클래스를 개발할때까지 기다릴 필요가 없이 작업을 시작할 수 있다.
 
 ## Serialization
-- JVM 힙 영역에 존재하는 객체를 한 줄로 늘어선 바이트의 형태(Stream)로 만드는 것을 직렬화라고 한다.
+- JVM 힙 영역에 존재하는 **객체를 한 줄로 늘어선 바이트의 형태(Stream)로 만드는 것**을 직렬화라고 한다.
   - 자바에서는 파일이나 콘솔의 입출력을 직접 다루지 않고, 스트림이라는 흐름을 통해 다룬다.
+  - 네트워크를 통해 객체를 전달하려면 이렇나 변환 과정이 필요하다
   - ex) 프로그램 <-> 스트림 <-> 키보드, 모니터, 파일, 네트워크, ...
+  - ex2) Object -> Byte Stream(JSON) -> File, DB, Memry -> Byte Stream -> Object
 - 직렬화한 것을 객체의 형태로 복원하는 작업을 역직렬화라고 한다.
 
 예시 : https://github.com/BinSin/BinSinMall/blob/master/binsinHibernateStore/src/main/java/com/binsin/store/model/Cart.java
@@ -181,11 +183,9 @@
 
 - 객체 지향적이지 않다. 객체의 데이터를 **캡슐화해야 하는데 static을 사용하면 이 법칙에 위배**된다.
 - 지나치게 많은 static 변수를 사용하게 되면 이들로부터 **프로그램이 종료할 때까지 메모리를 회수할 수 없기 때문에 가상머신이 메모리 부족**을 겪게 된다.
-- interface를 구현할 때 static 메서드를 사용할 수 없다. 이렇게** 재사용성을 높여주는 자바의 유용한 객체지향적 기능들을 사용하는 것을 방해**한다.
+- interface를 구현할 때 static 메서드를 사용할 수 없다. 이렇게 **재사용성을 높여주는 자바의 유용한 객체지향적 기능들을 사용하는 것을 방해**한다.
 
 출처 : https://unabated.tistory.com/entry/%EC%99%9C-%EC%9E%90%EB%B0%94%EC%97%90%EC%84%9C-static%EC%9D%98-%EC%82%AC%EC%9A%A9%EC%9D%84-%EC%A7%80%EC%96%91%ED%95%B4%EC%95%BC-%ED%95%98%EB%8A%94%EA%B0%80
-
-
 
 ## Call by Reference vs Call by Value
 - Call by Reference : 매개 변수의 원래 **주소에 값을 저장**하는 방식
