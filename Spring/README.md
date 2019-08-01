@@ -238,25 +238,25 @@ Representational State Transfer
 
 ### RESTful
 - 웹의 장점을 최대한 활용할 수 있는 아키텍처
-- 최근의 서버 프로그램은 다양한 브라우저와 안드로이폰, 아이폰과 같은 모바일 디바이스에서도 통신을 할 수 있어야 한다.
+- 최근의 서버 프로그램은 **다양한 브라우저와 안드로이폰, 아이폰과 같은 모바일 디바이스에서도 통신**을 할 수 있어야 한다.
 - REST 아키텍처는 Hypermedia API의 기본을 충실히 지키면서 범용성을 보장한다.
 
 ### REST의 특징
-1. Uniform (유니폼 인터페이스)
+1. **Uniform (유니폼 인터페이스)**
   - Uniform Interface는 URI로 지정한 리소스에 대한 조작을 통일되고 한정적인 인터페이스로 수행하는 아키텍처 스타일
-2. Stateless (무상태성)
+2. **Stateless (무상태성)**
   - 상태가 있다 없다는 의미는 사용자나 클라이언트의 컨택스트를 서버쪽에 유지 하지 않는다는 의미한다.
   - 세션이나 쿠키등을 별도로 관리하지 않기 때문에 API서버는 요청만을 들어오는 메시지로만 처리하기 때문에 구현이 단순하다.
-3. Cacheable (캐시 처리 가능)
+3. **Cacheable (캐시 처리 가능)**
   - REST의 가장 큰 특징 중 하나는 HTTP라는 기존 웹표준을 그대로 사용한다.
   - HTTP가 가진 캐싱 기능이 적용 가능하다. HTTP 프로토콜 표준에서 사용하는 Last-Modified태그나 E-Tag를 이용하면 캐싱 구현이 가능하다.
-4. Self-descriptiveness (자체 표현 구조)
+4. **Self-descriptiveness (자체 표현 구조)**
   - REST의 또 다른 큰 특징 중 하나는 REST API 메시지만 보고도 이를 쉽게 이해 할 수 있는 자체 표현 구조로 되어 있다는 것
-5. Client - Server Architecture (클라이언트 - 서버 구조)
+5. **Client - Server Architecture (클라이언트 - 서버 구조)**
   - REST 서버는 API를 제공하고, 제공된 API를 이용해서 비즈니스 로직 처리 및 저장을 책임진다.
   - 클라이언트의 경우 사용자 인증이나 컨택스트(세션,로그인 정보)등을 직접 관리하고 책임진다.
   - 서로간의 의존성이 줄어들게 된다.
-6. 계층형 구조
+6. **계층형 구조**
   - 클라이언트 입장에서는 REST API 서버만 호출한다.
   - REST 서버는 다중 계층으로 구성될 수 있다. 예를 들어 보안, 로드 밸런싱, 암호화, 사용자 인증 등을 추가하여 구조상의 유연성을 줄 수 있다.
 
@@ -267,8 +267,8 @@ Representational State Transfer
 
 ### REST API 디자인 가이드
 - REST API 중심 규칙
-  - URI는 정보의 자원을 표현해야 한다. HTTP Method의 행위가 URI 표현으로 들어가서는 안된다.
-  - 자원에 대한 행위는 HTTP Method로 표현
+  - **URI는 정보의 자원을 표현**해야 한다. HTTP Method의 행위가 URI 표현으로 들어가서는 안된다.
+  - **자원에 대한 행위는 HTTP Method로 표현**
 - URI 설계 시 주의점
   - 되도록 소문자를 사용하자
   -  URI 가독성을 높이기 위해 하이폰(-)을 사용하자  (띄어쓰기 쓰지 말자)
@@ -291,7 +291,7 @@ Representational State Transfer
 
 ## JPA
 - Java Persistence API의 약자
-- 자바 어플리케이션에서 관계형 데이터베이스를 사용하는 방식을 정의한 인터페이스이다.
+- 자바 애플리케이션에서 관계형 데이터베이스를 사용하는 방식을 정의한 인터페이스이다.
 
 ### Hibernate
 - JPA라는 명세의 구현체이다. (interface와 해당 interface를 구현한 class 와 같은 관계)
