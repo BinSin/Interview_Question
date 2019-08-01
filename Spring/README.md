@@ -78,16 +78,17 @@
 출처 : https://dodo4513.github.io/2017/06/18/server_architecture/
 
 ## Servlet vs JSP
+기능의 차이는 없고 역할의 차이만 있다.
 
 ### Servlet
-- Java 언어로 웹 애플리케이션을 개발하기 쉽게 하기 위해 만든 API이며 이 규약에 맞는 라이브러리나 클래스들을 상속 및 구현하여 만든 클래스들을 Servlet 이라고 한다.
+- 웹 기반의 요청에 대한 동적인 처리가 가능한 Server Side에서 돌아가는 자바 프로그램
 - **Java 코드** 안에 HTML 코드가 있다.
 - **데이터 처리(Controller)** 에 좋다.
 - 즉, DB와의 통신, Business Logic 호출, 데이터 읽고 확인하는 작업에 유용하다
 - Servlet이 수정되면 Java 코드를 컴파일(.class 파일 생성)한 후 동적인 페이지를 처리하기 때문에 전체 코드를 업데이트하면 다시 컴파일한 후 재배포하는 작업이 필요하다. (**개발 생산성 저하**)
 
 ### JSP
-- HTML 코딩이 어렵고 불편해서 HTML 내부에 **Java 코드를 삽입하는 형식**
+- Java 언어를 기반으로 하는 Server Side 스크립트 언어
 - **HTML 코드** 안에 Java 코드가 있다.
 - **Presentation(View)** 에 좋다.
 - 즉, 요청 결과를 나타내는 HTML을 작성하는데 유용하다.
