@@ -250,7 +250,7 @@ Representational State Transfer
 3. Cacheable (캐시 처리 가능)
   - REST의 가장 큰 특징 중 하나는 HTTP라는 기존 웹표준을 그대로 사용한다.
   - HTTP가 가진 캐싱 기능이 적용 가능하다. HTTP 프로토콜 표준에서 사용하는 Last-Modified태그나 E-Tag를 이용하면 캐싱 구현이 가능하다.
-4.Self-descriptiveness (자체 표현 구조)
+4. Self-descriptiveness (자체 표현 구조)
   - REST의 또 다른 큰 특징 중 하나는 REST API 메시지만 보고도 이를 쉽게 이해 할 수 있는 자체 표현 구조로 되어 있다는 것
 5. Client - Server Architecture (클라이언트 - 서버 구조)
   - REST 서버는 API를 제공하고, 제공된 API를 이용해서 비즈니스 로직 처리 및 저장을 책임진다.
