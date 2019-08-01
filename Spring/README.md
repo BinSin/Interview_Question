@@ -258,15 +258,15 @@ Representational State Transfer
   - 서로간의 의존성이 줄어들게 된다.
 6. 계층형 구조
   - 클라이언트 입장에서는 REST API 서버만 호출한다.
-  - REST 서버는 다중 계층으로 구성될 수 있다. 예를 들어 보안, 로드 밸런싱, 암호화, 사용자 인증등등 추가하여 구조상의 유연성을 줄 수 있다.
+  - REST 서버는 다중 계층으로 구성될 수 있다. 예를 들어 보안, 로드 밸런싱, 암호화, 사용자 인증 등을 추가하여 구조상의 유연성을 줄 수 있다.
 
 ### REST의 구성
 - 자원(Resource) : URI
-- 행위(Verb) : HTTP Method(GET, PUT, POST, EELETE 등)
+- 행위(Verb) : HTTP Method(GET, PUT, POST, DELETE 등)
 - 표현(Representations)
 
 ### REST API 디자인 가이드
--REST API 중심 규칙
+- REST API 중심 규칙
   - URI는 정보의 자원을 표현해야 한다. HTTP Method의 행위가 URI 표현으로 들어가서는 안된다.
   - 자원에 대한 행위는 HTTP Method로 표현
 - URI 설계 시 주의점
