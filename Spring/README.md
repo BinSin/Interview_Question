@@ -157,7 +157,7 @@
 
 ### Spring의 전략
 - Portable Service Abstraction(서비스 추상화) : 기술적인 복잡함은 추상화를 통해 Low Level의 기술구현부분과 기술을 사용하는 **인터페이스로 분리**한다.
-- DI(Dependency Injection) : 유연하게** 확장 가능한 객체**를 만들어 두고 그 관계는 외부에서 동적으로 설정해준다.
+- DI(Dependency Injection) : 유연하게 **확장 가능한 객체**를 만들어 두고 그 관계는 외부에서 동적으로 설정해준다.
 - AOP(Aspect Oriented Programming) : 애플리케이션 로직을 담당하는 코드에 남아있는 기술 관련 코드를 분리해서** 별도의 모듈로 관리**할 수 있게 해준다.
 - POJO(Plain Old Java Object) : **객체지향 원리에 충실**하면서, 특정 환경이나 규약에 종속되지 않고 **필요에 따라 재활용될 수 있는 방식**으로 설계된 객체이다.
 
