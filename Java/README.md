@@ -375,9 +375,9 @@ System.out::println
 
 스트림에 대한 내용은 크게 세 가지로 나눌 수 있습니다.
 
-생성하기 : 스트림 인스턴스 생성.
-가공하기 : 필터링(filtering) 및 맵핑(mapping) 등 원하는 결과를 만들어가는 중간 작업(intermediate operations).
-결과 만들기 : 최종적으로 결과를 만들어내는 작업(terminal operations).
+- 생성하기 : 스트림 인스턴스 생성.
+- 가공하기 : 필터링(filtering) 및 맵핑(mapping) 등 원하는 결과를 만들어가는 중간 작업(intermediate operations).
+- 결과 만들기 : 최종적으로 결과를 만들어내는 작업(terminal operations).
 
 ```
 전체 -> 맵핑 -> 필터링 1 -> 필터링 2 -> 결과 만들기 -> 결과물
