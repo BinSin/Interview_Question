@@ -186,7 +186,7 @@
 
 ![spring1](../img/spring1.png)
 
-요청이 들어오면 Filter -> Interceptor -> AOP -> interceptor -> Filter 순으로 거치게 된다.
+요청이 들어오면 **Filter -> Interceptor -> AOP -> interceptor -> Filter** 순으로 거치게 된다.
 
 1. 서버를 실행시켜 서블릿이 올라오는 동안에 init이 실행되고, 그 후 doFilter가 실행된다.
 2. 컨트롤러에 들어가기 전 preHandler가 실행된다.
