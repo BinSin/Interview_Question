@@ -463,7 +463,7 @@ set.forEach(x-> System.out.println(x));//1,2,3
 Iterator<T>를 반환한다.
 
 ###### noneMatch, anyMatch, allMatch
-조건을 **모든 요소들이 만족하는지 않는지**, ** 하나라도 조건을 만족**하는지, **모든 요소들이 만족**하는지 판단해서 boolean 값을 리턴한다.
+조건을 **모든 요소들이 만족하는지 않는지**, **하나라도 조건을 만족**하는지, **모든 요소들이 만족**하는지 판단해서 boolean 값을 리턴한다.
 ```Java
 List<Integer> ages = new ArrayList<Integer>();
 ages.add(1);ages.add(2);ages.add(3);//1,2,3
