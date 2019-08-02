@@ -103,10 +103,14 @@
 
 #### JSP와 Servlet을 모두 이용하는 모델
 - JSP와 Servlet을 모두 사용하여 View와 Controller를 분리한다.
+
+![spring1](../img/mvc.jpg)
+
 - MVC architecture
-  - **Model(Java Beans)** : 에플리케이션의 상태(데이터)를 나타낸다.
-  - **View(JSP)** : 보여지는 부분을 책임진다.
-  - **Controller(Servlet)** : Model과 View 사이의 **인터페이스 역할**을 한다.
+  - Model-View-Controller 의 합성어로 소프트웨어 디자인 패턴이다.
+  - **Model(Java Beans)** : 백그라운드에서 동작하는 로직을 처리
+  - **View(JSP)** : 사용자가 보게 될 결과 화면을 출력
+  - **Controller(Servlet)** : 사용자의 입력처리와 흐름 제어
 - 장점 : 기능에 따라 코드가 분리되어 있기 때문에 **유지보수가 용이**하다.
 - 단점 : 구조가 복잡하여 습득이 어렵고 작업량이 많다.
 
