@@ -144,7 +144,7 @@
 출처 : https://animal-park.tistory.com/8
 
 ## JDBC
-- Java DataBase Connection의 약자로, Java 언어를 통해 데이터 베이스에 접근할 수 있는 프로그래밍이다.
+- Java DataBase Connection의 약자로, Java 언어를 통해 **데이터 베이스에 접근할 수 있는 프로그래밍**이다.
 
 ### Java에서 DB를 연결하는 방법
 - JDBC를 사용하는 방법
