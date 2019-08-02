@@ -157,7 +157,7 @@
 ## Spring Framework
 
 ### Spring의 정의
-- IoC와 AOP를 지원하는 경량의 컨테이너 프레임워크
+- IoC와 AOP를 지원하는 **경량의 컨테이너 프레임워크**
 
 ### Spring의 전략
 - Portable Service Abstraction(서비스 추상화) : 기술적인 복잡함은 추상화를 통해 Low Level의 기술구현부분과 기술을 사용하는 **인터페이스로 분리**한다.
