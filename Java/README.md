@@ -26,6 +26,7 @@
 - [Serialization](#serialization)
 - [Process vs Thread](#process-vs-thread)
   - [Thread를 구현하는 방법](#thread를-구현하는-방법)
+- [Synchronezed](#synchronezed)
 - [Static](#static)
   - [Static 단점](#static-단점)
 - [Call by Reference vs Call by Value](#call-by-reference-vs-call-by-value)
@@ -170,6 +171,28 @@
 ### Thread를 구현하는 방법
 1. Thread Class를 상속받는다.
 2. Runnable 인터페이스를 implements하여 구현한다.
+
+## Synchronezed
+- 동기화란 **여러개의 쓰레드가 하나의 자원을 공유할 때 하나의 쓰레드만 제외하고 나머지의 접근을 못하도록 막는 것**이다.
+- 공유 자원에 접근할 때 다른 쓰레드가 접근하지 못하도록 해당 자원을 잠금(lock)해버리는 기능을 가지고 있다.
+- 자원의 사용이 끝나면 unlock을 하여 다른 쓰레드가 접근할 수 있도록 한다.
+- **메소드 앞**에 synchronized를 붙여 동기화를 할 수 있다.
+```java
+public synchronized void add(int value){
+      this.count += value;
+  }
+```
+- **인스턴스 메소드 안에 동기화 블록**을 만들 수 있다.
+```java
+  public void add(int value){
+    synchronized(this){
+       this.count += value;   
+    }
+  }
+```
+- **임계구역(Critical Region)** : 두 개 이상의 쓰레드가 데이터를 조작할 때, 원하지 않는 결과를 얻을 수 있는데, 이러한 구역을 임계구역이라고 한다.
+
+출처 : https://blog.naver.com/PostView.nhn?blogId=pjok1122&logNo=221506668908&categoryNo=29&parentCategoryNo=0&viewDate=&currentPage=1&postListTopCurrentPage=1&from=postView
 
 ## Static
 - 인스턴스를 생성하면, 각 인스턴스들은 서로 독립적이기 때문에 서로 다른 값을 유지하는데, static을 사용하면 **각 인스턴스들이 공통적으로 값이 유지**된다.
